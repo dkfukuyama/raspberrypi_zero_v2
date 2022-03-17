@@ -1,0 +1,24 @@
+LOAD VAL
+8091
+postfunc
+{
+  text: '54縺ゅ＞縺・∴縺・,
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '30',
+  submit: 'google'
+}
+C:\Users\fuku3\OneDrive - fukufukuyama\繝峨く繝･繝｡繝ｳ繝・Node_Test_RIREMA\g_dlfile\2022-03-16_09-02-25_027.wav
+playOnGoogleHome
+postfunc
+{
+  text: '54縺ゅ＞縺・∴縺・,
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '30',
+  submit: 'google'
+}
+C:\Users\fuku3\OneDrive - fukufukuyama\繝峨く繝･繝｡繝ｳ繝・Node_Test_RIREMA\g_dlfile\2022-03-16_09-02-30_103.wav
+playOnGoogleHome

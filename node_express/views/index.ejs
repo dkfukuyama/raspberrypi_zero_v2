@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title><%- data.page.title %></title>
+        <link rel="stylesheet" type="text/css" href="/css/base0.css">
+    </head>
+    <body>
+        <h1><%- data.page.title2 ?? data.page.title ?? "ぐーぐるさんだよ" %></h1>
+
+        <% if(data.page.view_page) { %>
+            <% try { %>
+                <%- include(data.page.view_page, {items: data.items ?? null, page: data.page}) %>
+            <% }catch (err){ %>
+                <P><H2>いまはみられないよ</H2><%- data.page.view_page %></P>
+                <P><%- err %></P>
+            <% } %>
+        <% } %>
+        
+        <%- include("./menu.ejs", {pages: pages}) %>
+    </body>
+</html>

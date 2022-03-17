@@ -1,0 +1,75 @@
+<P>きまったじこくによていをよみあげる</P>
+<button id="g_cal_button">いま、よていをよみあげる</button>
+<P>きまったじこくにおんがくをかける</P>
+<P>おとのおおきさ</P>
+<P>ジャンプのおと</P>
+<button id="reboot_webserver">ウェブサーバをさいきどうする</button>
+<br/>
+<br/>
+<button id="reboot_button">ラズベリーパイをさいきどう</button>
+<br/>
+<br/>
+<button id="show_log">ログをひょうじする</button>
+
+<p id="resXmlHttpRequestObj"></p>
+
+<script>
+  let xhr = new XMLHttpRequest();
+ 
+document.getElementById('g_cal_button').onclick = function() {
+post_command(
+{
+  alert_text : 'よていをよみあげます', 
+  mode : 'cal_today',
+  return_type : 'text'
+});
+}
+
+document.getElementById('reboot_webserver').onclick = function(){
+post_command(
+{
+  alert_text : 'ウェブサーバをさいきどうします。', 
+  mode : 'system_command',
+  command : 'sudo systemctl restart pi_server',
+  return_type : 'text'
+});
+}
+
+document.getElementById('reboot_button').onclick = function(){
+post_command(
+{
+  alert_text : 'ラズベリーパイをさいきどうします。', 
+  mode : 'system_command',
+  command : 'sudo reboot',
+  return_type : 'text'
+});
+}
+
+document.getElementById('show_log').onclick = function(){
+post_command(
+{
+  alert_text : 'ログを表示します。', 
+  mode : 'system_command',
+  command : 'sudo systemctl status pi_server -n 50 | cat',
+  return_type : 'text'
+});
+}
+
+
+function post_command(command_param) {
+  alert(command_param.alert_text);
+  let snd = JSON.stringify(command_param);
+  let xhr = new XMLHttpRequest();
+  xhr.open('POST', '/command');
+  xhr.setRequestHeader("Content-Type", "application/json");
+
+  xhr.onreadystatechange = function(){
+    //if(xmlhttp.readyState==4 && xmlhttp.status==200){
+        /* XMLデータ取得 */
+        document.getElementById("resXmlHttpRequestObj").innerText=xhr.responseText;
+    //}
+  }
+
+  xhr.send(snd);
+}
+</script>

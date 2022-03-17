@@ -1,0 +1,62 @@
+<form action="<%- data.page.path %>" method="POST">
+    <textarea name="text" cols="60" rows="5"><%- prevPostData.text %></textarea>
+    <BR>
+
+    <% let cx = prevPostData?.voice_type ?? 0 %>
+    <% let special = page?.specialParams ?? 0 %>
+    <P>こえのしゅるい<BR>
+        <% const vt = special.voiceTypes %>
+        <% const vlen = vt.length %>
+        <% for(let i=0; i<vlen; i++){ %>
+            <input type="radio" name="voice_type" id="rb1" value="<%= i %>" <%- cx==i?'checked':'' %>><%- vt[i].show_name %></input>　　
+            <%- i%4==3 ? '<BR>' : '' %>
+        <%} %>
+    </p>
+    <% let sp = prevPostData?.speed ?? 1 %>
+    <% let pt = prevPostData?.pitch ?? 0 %>
+    <% let vol = prevPostData?.volume ?? 30 %>
+    <P>こえのはやさ
+        <input id="speed_slider" type="range" name="speed" min="0.25" max="4.00" step="0.01" 
+            value="<%- sp %>"><div id="speed_value"><%- sp %></div>
+    </P>
+    <P>こえのたかさ
+        <input id="pitch_slider" type="range" name="pitch" min="-20" max="20" step="0.01" 
+            value="<%- pt %>"><div id="pitch_value"><%- pt %></div>
+    </P>
+
+    <P>おとのおおきさ
+        <input id="volume_slider" type="range" name="volume" min="0" max="100" step="5" 
+            value="<%- vol %>"><div id="volume_value"><%- vol %></div>
+    </P>
+    
+    <P><input type="checkbox" name="reverse_play" value="true">はんたいことば</P>
+
+    <button type="submit" value="google" name="submit">ぐーぐるさんがしゃべる</button>
+    <button type="submit" value="oto" name="submit">おとうさんにおくる</button>
+</form>
+
+
+<script>
+    function inputChange0(event){
+        val0.innerText = speed_slider.value;
+    }    
+    function inputChange1(event){
+        val1.innerText = pitch_slider.value;
+    }    
+    function inputChange2(event){
+        val2.innerText = volume_slider.value;
+    }    
+
+    let element0 = document.getElementById('speed_slider');
+    element0.addEventListener('change', inputChange0);
+    let val0 = document.getElementById('speed_value');
+
+    let element1 = document.getElementById('pitch_slider');
+    element1.addEventListener('change', inputChange1);
+    let val1 = document.getElementById('pitch_value');
+
+    let element2 = document.getElementById('volume_slider');
+    element2.addEventListener('change', inputChange2);
+    let val2 = document.getElementById('volume_value');
+
+</script>
