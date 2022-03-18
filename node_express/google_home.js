@@ -30,7 +30,7 @@ const path = require('path');
 async function playOnGoogleHome(fname, media, params){
     console.log('playOnGoogleHome');
     return new Promise((resolve, reject) =>{
-        let sto = setTimeout(()=>reject('time out find google home'), 5000);
+        let sto = setTimeout(()=>reject('time out find google home'), 10000);
         const client = new ChromecastAPI();
         client.on('device', async function (device) {
             console.log(device.friendlyName);
@@ -137,3 +137,7 @@ async function speechOnGoogleHomeCal(fname, params){
 
 exports.speechOnGoogleHome = speechOnGoogleHome;
 exports.speechOnGoogleHomeCal = speechOnGoogleHomeCal;
+
+
+
+speechOnGoogleHomeCal('リビングルーム', { text: "aaaaaa" });

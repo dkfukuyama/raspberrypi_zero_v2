@@ -79,7 +79,9 @@ page_path_set_index_ejs = [
                 console.log(req.body.mode);
                 switch(req.body.mode){
                 case 'cal_today' :
-                    return gtts.speechOnGoogleHomeCal(speaker_name, {});
+                    return new Promise(async (resolve, _)=>await resolve(gtts.speechOnGoogleHomeCal(speaker_name, {})));
+                case 'clean_wav':
+                        return new Promise((resolve, _) => resolve(require('./clean').clean_wav(100)));
                 case 'system_command' :
                     console.log(`${req.body.command}`);
                     return new Promise((resolve, reject)=>{
@@ -118,17 +120,18 @@ page_path_set_index_ejs.forEach(p =>{
             try{
                 pfunc_results = await p.postfunc(req, res);
                 console.log(pfunc_results);
-                if(req.body.return_type == 'text'){
+                if (req.body.return_type == 'text') {
+                    res.type('text/plain');
                     res.send(pfunc_results);
                     res.end();
                 }
             } catch(er){
-                if(req.body.return_type == 'text'){
+                if (req.body.return_type == 'text') {
+                    res.type('text/plain');
                     res.send(JSON.stringify(er));
                     res.end();
                 }
             }
-            next();
         });
     }
     app.all(p.path, function (req, res) {
