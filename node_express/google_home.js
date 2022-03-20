@@ -101,13 +101,17 @@ async function getCalJson(){
             url: vars.globalVars().g_calenderSummaryUrl,
             method: 'GET'
         };
-        request(options, function (error, response, body) {
-            if(error){
-                reject(error);
-            }else{
-                resolve(JSON.parse(body));
-            }
-        });
+        try{
+            request(options, function (error, response, body) {
+                if(error){
+                    reject(error);
+                }else{
+                    resolve(JSON.parse(body));
+                }
+            });
+        }catch(er){
+            reject(er);
+        }
     });
 }
 
@@ -137,7 +141,3 @@ async function speechOnGoogleHomeCal(fname, params){
 
 exports.speechOnGoogleHome = speechOnGoogleHome;
 exports.speechOnGoogleHomeCal = speechOnGoogleHomeCal;
-
-
-
-speechOnGoogleHomeCal('リビングルーム', { text: "aaaaaa" });
