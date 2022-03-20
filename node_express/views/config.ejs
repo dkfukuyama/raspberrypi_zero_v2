@@ -23,7 +23,8 @@
 	{
 	alert_text : 'よていをよみあげます',
 	mode : 'cal_today',
-	return_type : 'text'
+	return_header : 'text/plain',
+	short_return : true
 	});
 	}
 
@@ -32,7 +33,8 @@
 	{
 	alert_text : 'おんせいファイルをしょうきょします。',
 	mode : 'clean_wav',
-	return_type : 'text'
+	return_header : 'text/plain',
+	short_return : true
 	});
 	}
 
@@ -43,7 +45,8 @@
 	alert_text : 'ウェブサーバをさいきどうします。',
 	mode : 'system_command',
 	command : 'sudo systemctl restart pi_server',
-	return_type : 'text'
+	return_header : 'text/plain',
+	short_return : true
 	});
 	}
 
@@ -53,7 +56,8 @@
 	alert_text : 'ラズベリーパイをさいきどうします。',
 	mode : 'system_command',
 	command : 'sudo reboot',
-	return_type : 'text'
+	return_header : 'text/plain',
+	short_return : true
 	});
 	}
 
@@ -62,8 +66,9 @@
 	{
 	alert_text : 'ログを表示します。',
 	mode : 'system_command',
-	command : 'sudo systemctl status pi_server -n 50 | cat',
-	return_type : 'text'
+	command : 'sudo systemctl status pi_server -n 80 | cat',
+	return_type : 'text',
+	short_return : true
 	});
 	}
 

@@ -79,9 +79,9 @@ page_path_set_index_ejs = [
                 console.log(req.body.mode);
                 switch(req.body.mode){
                 case 'cal_today' :
-                    return new Promise(async (resolve, _)=>await resolve(gtts.speechOnGoogleHomeCal(speaker_name, {})));
+                    return gtts.speechOnGoogleHomeCal(speaker_name, {});
                 case 'clean_wav':
-                        return new Promise((resolve, _) => resolve(require('./clean').clean_wav(100)));
+                    return new Promise((resolve, _) => resolve(require('./clean').clean_wav(100)));
                 case 'system_command' :
                     console.log(`${req.body.command}`);
                     return new Promise((resolve, reject)=>{
@@ -94,6 +94,8 @@ page_path_set_index_ejs = [
                             }
                         });
                     });
+                default:
+                    return new Promise((resolve, _)=>resolve());
                 }
             }
         }
@@ -117,20 +119,18 @@ page_path_set_index_ejs.forEach(p =>{
             console.log('postfunc');
             console.log(req.body);
 
-            try{
-                pfunc_results = await p.postfunc(req, res);
-                console.log(pfunc_results);
-                if (req.body.return_type == 'text') {
-                    res.type('text/plain');
-                    res.send(pfunc_results);
-                    res.end();
-                }
-            } catch(er){
-                if (req.body.return_type == 'text') {
-                    res.type('text/plain');
-                    res.send(JSON.stringify(er));
-                    res.end();
-                }
+            let er_occurred = false;
+            pfunc_results = await p.postfunc(req, res).catch(er=>{
+                er_occurred = true;
+                return JSON.stringify(er);
+            });
+            console.log(pfunc_results);
+            if (req.body.short_return) {
+                res.type(req.body.return_header);
+                res.send(pfunc_results);
+                res.end();
+            }else{
+                next();
             }
         });
     }
