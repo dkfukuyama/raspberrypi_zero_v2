@@ -2,11 +2,29 @@
 const app = express();
 const path = require('path');
 const gtts = require('./google_home')
+const favicon = require('express-favicon');
 const vars = require('./variables');
 const exec = require('child_process').exec;
+const bodyParser = require('body-parser');
+const { google } = require("@google-cloud/text-to-speech/build/protos/protos");
+
+const ghome = require('./gHomeCnt');
+const ut = require('./utils');
 
 
-const speaker_name = 'リビングルーム';
+app.use(favicon(path.join(__dirname, '/views/ico/favicon.png')));
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(express.json());
+
+// テンプレートエンジンの指定
+app.set("view engine", "ejs");
+
+
+const speaker_name = '2Fリビング';
+let volumeLevel = 30;
 
 page_path_set_index_ejs = [
     {
@@ -26,8 +44,8 @@ page_path_set_index_ejs = [
                     text: req.body.text,
                     reverse_play: req.body.reverse_play,
                     pitch : req.body.pitch,
-                    speakingRate : req.body.speed,
-                    volume : req.body.volume ?? 0.4,
+                    speakingRate: req.body.speed,
+                    volume: req.body.volume,
                     voiceTypeId : req.body.voice_type
                 }
             );
@@ -101,16 +119,6 @@ page_path_set_index_ejs = [
         }
     }
 ]
-
-const bodyParser = require('body-parser');
-const internal = require("stream");
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(express.json());
-
-// テンプレートエンジンの指定
-app.set("view engine", "ejs");
 
 page_path_set_index_ejs.forEach(p =>{
 
@@ -186,4 +194,21 @@ app.use((err, req, res, next) => {
     res.render("./ER/500.ejs", {path: req.path, pages: page_path_set_index_ejs });
 })
 
-app.listen(vars.globalVars().serverPort, ()=>console.log(vars.globalVars().serverPort));
+let httpServerPort = vars.globalVars().serverPort;
+async function main() {
+    app.listen(httpServerPort, () => console.log(`http server port No. ${app.settings.port}`));
+
+    ghome.startSeekGoogleLoop();
+    for (let i = 0; ; i++) {
+        await ghome.getVolume(speaker_name)
+            .then(async v => {
+                console.log(v);
+                ghome.play(speaker_name);
+                await ut.delay_ms(10000);
+            })
+            .catch(err => console.debug(err));
+        await ut.delay_ms(1000);
+    }
+}
+
+main();
