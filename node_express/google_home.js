@@ -1,26 +1,53 @@
-async function delay_ms(timeout_ms){
-    return new Promise((resolve, reject)=>{
-        setTimeout(()=>resolve(), timeout_ms < 0 ? 0 : timeout_ms);
+const ut = require('./utils');
+
+async function GetVolumeFromFriendlyNameAsync(fname) {
+    return new Promise((resolve, reject) => {
+        let sto = setTimeout(() => reject('get vol time out find google home'), 30000);
+        const client = new ChromecastAPI();
+        client.on('device', async function (device) {
+            if (device.friendlyName == fname) {
+                clearTimeout(sto);
+                for (let i = 0; ; i++) {
+                    await GetVolumeFromDeviceAsync(device)
+                        .then(v => resolve(v))
+                        .catch(err => { if (i > 10) reject(err) });
+                }
+                await delay_ms(500);
+            }
+        });
     });
 }
 
-const bonjour = require('bonjour')();
-
-async function seekGoogleHomes(timeout_ms){
-
-    let browser = bonjour.find({type: 'googlecast'});
-    await delay_ms(timeout_ms);
-    return browser.services;
+async function GetVolumeFromDeviceAsync(device) {
+    return new Promise((resolve, reject) => {
+        let sto = setTimeout(() => reject(), 20000);
+        try {
+            device.getVolume((err, volume) => {
+                clearTimeout(sto);
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(volume);
+                }
+            });
+        } catch (err) {
+            reject(err);
+        }
+    });
 }
 
 async function SetVolumeAsync(device, vol){
     return new Promise((resolve, reject)=>{
-        let sto = setTimeout(()=>reject(), 5000);
-        device.setVolume(vol, ()=>{
-            console.log(`SetVol ${vol}`);
-            clearTimeout(sto);
-            resolve(); 
-        });
+        let sto = setTimeout(() => reject(), 10000);
+        try {
+            device.setVolume(vol, () => {
+                console.log(`SetVol ${vol}`);
+                clearTimeout(sto);
+                resolve();
+            });
+        } catch (err) {
+            reject(err);
+        }
     });
 }
 
@@ -30,19 +57,19 @@ const path = require('path');
 async function playOnGoogleHome(fname, media, params){
     console.log('playOnGoogleHome');
     return new Promise((resolve, reject) =>{
-        let sto = setTimeout(()=>reject('time out find google home'), 10000);
+        let sto = setTimeout(()=>reject('time out find google home'), 30000);
         const client = new ChromecastAPI();
         client.on('device', async function (device) {
             console.log(device.friendlyName);
             if(device.friendlyName == fname){
                 clearTimeout(sto);
                 setTimeout(()=>reject('device play end is not detected time out'), 20000);
-                console.log(`volume set ${params?.volume}`);
                 if(params?.volume){
                     await SetVolumeAsync(device, params.volume/100);
                 }
                 console.log(media);
                 device.play(media, function (err) {
+                    console.log('PLAY CALLBACK');
                     if (!err) resolve('Play');
                     else reject(err);
                 });
@@ -82,7 +109,7 @@ async function speechOnGoogleHome(fname, params){
             }
 
             await gtts.getTtsMp3(params).catch((err)=>reject(err));
-            const fpath = path.join(vars.globalVars().httpDir, path_togo);
+            const fpath = vars.globalVars().httpDir + "/" + path_togo;
             await playOnGoogleHome(fname, fpath, params).catch((err)=>reject(err));
             resolve();
         }catch(err){
@@ -139,5 +166,6 @@ async function speechOnGoogleHomeCal(fname, params){
     });
 }
 
+exports.GetVolumeFromFriendlyNameAsync = GetVolumeFromFriendlyNameAsync;
 exports.speechOnGoogleHome = speechOnGoogleHome;
 exports.speechOnGoogleHomeCal = speechOnGoogleHomeCal;

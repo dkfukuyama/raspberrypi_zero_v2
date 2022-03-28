@@ -9,11 +9,12 @@ function globalVars(){
         if(firstTry || GL_VARS.errorFlag){
             console.log("LOAD VAL");
             GL_VARS.errorFlag = true;
-            GL_VARS.serverPort = (process.env.SERVER_PORT ?? 80);
+            GL_VARS.serverPort = (process.env.SERVER_PORT ?? 8091);
             GL_VARS.voiceSubDir = (process.env.VOICE_SUBDIR ?? '/g_dlfile');
 
             GL_VARS.httpDir0 = `http://${getLocalAddress().ipv4[0].address}:${GL_VARS.serverPort}`;
-            GL_VARS.httpDir = path.join(GL_VARS.httpDir0, GL_VARS.voiceSubDir);
+            GL_VARS.httpDir = GL_VARS.httpDir0 + GL_VARS.voiceSubDir;
+
 
             GL_VARS.g_calenderSummaryUrl = process.env.G_CAL_SUM;
 
@@ -28,6 +29,7 @@ function globalVars(){
                     GL_VARS.saveDir0 = __dirname;
             }
 
+            console.log([GL_VARS.httpDir0, GL_VARS.httpDir]);
             console.log([GL_VARS.saveDir0, GL_VARS.voiceSubDir]);
             
             GL_VARS.saveDir = path.join(GL_VARS.saveDir0, GL_VARS.voiceSubDir);
