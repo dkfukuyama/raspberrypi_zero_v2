@@ -40,12 +40,13 @@ function stopSeekGoogleLoop() {
 async function seekGoogleHomes(timeout, repeatType) {
     return new Promise((resolve, reject)=>{
         let return_val = [];
-        //let browser = bonjour.find({ type: 'googlecast' });
-        const browser = bonjour.find({type: 'http'}, function (service){
+        const browser = bonjour.find({ type: 'googlecast' },
+        //const browser = bonjour.find({ type: 'http' },
+            function (service) {
             //console.log(service);
             return_val.push(
                 //{ address: s.addresses[0], friendlyName: s.txt.fn }
-                { address: service.addresses[0], friendlyName: service.name }
+                { address: service.addresses[0], friendlyName: service.name, speakerName: service.txt.fn }
             );
         });
         setTimeout(()=>{

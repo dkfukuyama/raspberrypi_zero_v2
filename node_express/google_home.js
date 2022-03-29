@@ -70,6 +70,56 @@ async function getCalJson(sdate, edate){
     });
 }
 
+async function getCalDayBetweenJson(date1, date2) {
+    let localtime = new Date(Date.now());
+    let localdate0 = new Date(localtime.getFullYear(), localtime.getMonth(), localtime.getDate() + date1);
+    let localdate1 = new Date(localtime.getFullYear(), localtime.getMonth(), localtime.getDate() + date2 + 1);
+
+    return gtts.getCalJson(
+        localdate0.toLocaleDateString().substring(0, 10).split("/").join("-"),
+        localdate1.toLocaleDateString().substring(0, 10).split("/").join("-")
+    );
+}
+
+function getCalJsonReturnToText(g) {
+    /*
+    events: [
+    {
+      Summary: 'D 千葉県　帰りは凄く遅い',
+      AllDayEvent: true,
+      Title: 'D 千葉県　帰りは凄く遅い',
+      StartTime: '2022-03-30T00:00:00.000Z',
+      EndTime: '2022-03-31T00:00:00.000Z',
+      Location: ''
+    },
+    {
+      Summary: 'YDS',
+      AllDayEvent: false,
+      Title: 'YDS',
+      StartTime: '2022-03-30T01:00:00.000Z',
+      EndTime: '2022-03-30T08:00:00.000Z',
+      Location: ''
+    }
+  ],
+     * 
+     */
+    const textparams = {
+        headerAll : "今日は[date]。予定のお知らせだよーーん",
+        headerSchedule: "[i]番目の予定は[shName]。",
+        startTime: "開始時刻は[startTime]だよ。",
+        noSchedule:"今日はカレンダーに登録されている予定はないよ。"
+    }
+
+    let resultsText = textparams.headerAll;
+    if (g.events.length == 0) {
+        resultsText += textparams.noSchedule;
+    } else {
+        g.events.forEach(e => {
+            resultsText += headerSchedule;
+        });
+    }
+}
+
 async function speechOnGoogleHomeCal(fname, params){
     let stay_loop = true;
 
@@ -78,8 +128,7 @@ async function speechOnGoogleHomeCal(fname, params){
             stay_loop = false;
             await getCalJson().then(async (g)=>
             {
-                console.log(g);
-                params = g;
+                params.text = getCalJsonReturnToText(g);
                 params.volume = 80;
                 params.voiceTypeId = Math.floor(Math.random() * 4);
                 params.pitch = Math.random() * 10 - 5;
@@ -95,5 +144,6 @@ async function speechOnGoogleHomeCal(fname, params){
 }
 
 exports.getCalJson = getCalJson;
+exports.getCalDayBetweenJson = getCalDayBetweenJson;
 exports.speechOnGoogleHome = speechOnGoogleHome;
 exports.speechOnGoogleHomeCal = speechOnGoogleHomeCal;
