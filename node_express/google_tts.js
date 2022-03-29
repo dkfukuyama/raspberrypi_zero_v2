@@ -1,9 +1,9 @@
 const textToSpeech = require('@google-cloud/text-to-speech');
-const { rejects } = require('assert');
+//const { rejects } = require('assert');
 
 // Import other required libraries
 const fs = require('fs');
-const { exit } = require('process');
+//const { exit } = require('process');
 const util = require('util');
 // Creates a client
 const client = new textToSpeech.TextToSpeechClient();
@@ -21,13 +21,18 @@ const voiceType = [
   {languageCode: 'ko-KR', 'name':'ko-KR-Standard-A', show_name: 'かんこくご1'},
 ]
 
-
-
-async function getTtsMp3(params) {
+async function getTtsAudioData(params) {
   return new Promise(async (resolve, reject)=>{
 
     let vt = params.voiceTypeId ?? 0;
     vt = (!isNaN(vt) && vt >=0 && vt <voiceType.length) ? vt : 0;
+
+    let enc = null;
+    if(params.outfilePath.endsWith('.wav')){
+      enc = 'LINEAR16';
+    }else if(params.outfilePath.endsWith('.mp3')){
+      enc = 'MP3';
+    }
 
     // Construct the request
     const request = {
@@ -36,20 +41,21 @@ async function getTtsMp3(params) {
       voice: voiceType[vt],
       // select the type of audio encoding
       audioConfig: {
-        audioEncoding: 'LINEAR16', // OR 'MP3'
+        audioEncoding: enc,
         pitch: params.pitch ?? "0.00",
         speakingRate: params.speakingRate ?? "1.00"
       },
     };
 
     try{
-      let sto = setTimeout(()=>reject('time out getTtsMp3'), 60000);
+      let sto = setTimeout(()=>reject('time out getTtsAudioData'), 60000);
       // Performs the text-to-speech request
       const [response] = await client.synthesizeSpeech(request);
       // Write the binary audio content to a local file
       const writeFile = util.promisify(fs.writeFile);
       await writeFile(params.outfilePath, response.audioContent, 'binary');
       console.log(`Audio content written to file: ${params.outfilePath}`);
+      clearTimeout(sto);
       resolve();
     }catch(err){
       reject(err);
@@ -58,4 +64,4 @@ async function getTtsMp3(params) {
 }
 
 exports.voiceType = voiceType;
-exports.getTtsMp3 = getTtsMp3;
+exports.getTtsAudioData = getTtsAudioData;
