@@ -1,82 +1,9 @@
-const ut = require('./utils');
-
-async function GetVolumeFromFriendlyNameAsync(fname) {
-    return new Promise((resolve, reject) => {
-        let sto = setTimeout(() => reject('get vol time out find google home'), 30000);
-        const client = new ChromecastAPI();
-        client.on('device', async function (device) {
-            if (device.friendlyName == fname) {
-                clearTimeout(sto);
-                for (let i = 0; ; i++) {
-                    await GetVolumeFromDeviceAsync(device)
-                        .then(v => resolve(v))
-                        .catch(err => { if (i > 10) reject(err) });
-                }
-                await delay_ms(500);
-            }
-        });
-    });
-}
-
-async function GetVolumeFromDeviceAsync(device) {
-    return new Promise((resolve, reject) => {
-        let sto = setTimeout(() => reject(), 20000);
-        try {
-            device.getVolume((err, volume) => {
-                clearTimeout(sto);
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve(volume);
-                }
-            });
-        } catch (err) {
-            reject(err);
-        }
-    });
-}
-
-async function SetVolumeAsync(device, vol){
-    return new Promise((resolve, reject)=>{
-        let sto = setTimeout(() => reject(), 10000);
-        try {
-            device.setVolume(vol, () => {
-                console.log(`SetVol ${vol}`);
-                clearTimeout(sto);
-                resolve();
-            });
-        } catch (err) {
-            reject(err);
-        }
-    });
-}
-
-const ChromecastAPI = require('chromecast-api');
 const path = require('path');
+const vars = require('./variables');
+const gtts = require('./google_tts')
+const gHome = require('./gHomeCnt');
+const request = require('request');
 
-async function playOnGoogleHome(fname, media, params){
-    console.log('playOnGoogleHome');
-    return new Promise((resolve, reject) =>{
-        let sto = setTimeout(()=>reject('time out find google home'), 30000);
-        const client = new ChromecastAPI();
-        client.on('device', async function (device) {
-            console.log(device.friendlyName);
-            if(device.friendlyName == fname){
-                clearTimeout(sto);
-                setTimeout(()=>reject('device play end is not detected time out'), 20000);
-                if(params?.volume){
-                    await SetVolumeAsync(device, params.volume/100);
-                }
-                console.log(media);
-                device.play(media, function (err) {
-                    console.log('PLAY CALLBACK');
-                    if (!err) resolve('Play');
-                    else reject(err);
-                });
-            }
-        });
-    });
-}
 
 function getNowDateWithString(){
     let dt = new Date();
@@ -92,9 +19,6 @@ function getNowDateWithString(){
     return result;
 }
 
-
-const vars = require('./variables');
-const gtts = require('./google_tts')
 async function speechOnGoogleHome(fname, params){
     return new Promise(async (resolve, reject)=>{
         try{
@@ -108,32 +32,36 @@ async function speechOnGoogleHome(fname, params){
                 params.text = params.text.split("").reverse().join("");
             }
 
-            await gtts.getTtsMp3(params).catch((err)=>reject(err));
+            await gtts.getTtsAudioData(params).catch((err)=>reject(err));
             const fpath = vars.globalVars().httpDir + "/" + path_togo;
-            await playOnGoogleHome(fname, fpath, params).catch((err)=>reject(err));
-            resolve();
+
+            await gHome.play(fname, fpath, params).then(()=>resolve()).catch((err)=>reject(err));
         }catch(err){
             reject(err);
         }
     });
 }
 
-var request = require('request');
-async function getCalJson(){
+async function getCalJson(sdate, edate){
     return new Promise((resolve, reject)=>{
         setTimeout(()=>reject('Get Cal Timeout'), 30000);
-        var data = [];
 
         var options = {
             url: vars.globalVars().g_calenderSummaryUrl,
-            method: 'GET'
+            method: 'POST',
+            json: true,
+            followAllRedirects: true,
+            form: {
+                startDate:sdate,
+                endDate:edate,
+            }
         };
         try{
             request(options, function (error, response, body) {
                 if(error){
                     reject(error);
                 }else{
-                    resolve(JSON.parse(body));
+                    resolve(body);
                 }
             });
         }catch(er){
@@ -166,6 +94,6 @@ async function speechOnGoogleHomeCal(fname, params){
     });
 }
 
-exports.GetVolumeFromFriendlyNameAsync = GetVolumeFromFriendlyNameAsync;
+exports.getCalJson = getCalJson;
 exports.speechOnGoogleHome = speechOnGoogleHome;
 exports.speechOnGoogleHomeCal = speechOnGoogleHomeCal;

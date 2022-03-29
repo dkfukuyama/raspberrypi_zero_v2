@@ -196,6 +196,17 @@ app.use((err, req, res, next) => {
 
 let httpServerPort = vars.globalVars().serverPort;
 async function main() {
+
+    let localtime = new Date(Date.now());
+    let localdate0 = new Date(localtime.getFullYear(), localtime.getMonth(), localtime.getDate());
+    let localdate1 = new Date(localtime.getFullYear(), localtime.getMonth(), localtime.getDate()+1);
+
+    console.log(await gtts.getCalJson(
+        localdate0.toLocaleDateString().substring(0,10).split("/").join("-"), 
+        localdate1.toLocaleDateString().substring(0,10).split("/").join("-")
+    ));
+    return;
+
     app.listen(httpServerPort, () => console.log(`http server port No. ${app.settings.port}`));
     ghome.startSeekGoogleLoop();
     for (let i = 0; ; i++) {
@@ -209,6 +220,7 @@ async function main() {
             })
             .catch(err => console.debug(err));
         */
+
         await ut.delay_ms(1000);
     }
 }
