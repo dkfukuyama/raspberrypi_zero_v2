@@ -197,20 +197,9 @@ app.use((err, req, res, next) => {
 let httpServerPort = vars.globalVars().serverPort;
 async function main() {
 
-    let localtime = new Date(Date.now());
-    let localdate0 = new Date(localtime.getFullYear(), localtime.getMonth(), localtime.getDate());
-    let localdate1 = new Date(localtime.getFullYear(), localtime.getMonth(), localtime.getDate()+1);
-
-    console.log(await gtts.getCalJson(
-        localdate0.toLocaleDateString().substring(0,10).split("/").join("-"), 
-        localdate1.toLocaleDateString().substring(0,10).split("/").join("-")
-    ));
-    return;
-
-    app.listen(httpServerPort, () => console.log(`http server port No. ${app.settings.port}`));
+    app.listen(httpServerPort, () => console.log(`http server port No. ${httpServerPort}`));
     ghome.startSeekGoogleLoop();
     for (let i = 0; ; i++) {
-        console.log(ghome.getGoogleHomeAddresses());
         /*
         await ghome.getVolume(speaker_name)
             .then(async v => {
@@ -222,6 +211,7 @@ async function main() {
         */
 
         await ut.delay_ms(1000);
+        //console.log(ghome.getGoogleHomeAddresses());
     }
 }
 
