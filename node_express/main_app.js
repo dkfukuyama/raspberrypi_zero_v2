@@ -197,9 +197,10 @@ app.use((err, req, res, next) => {
 let httpServerPort = vars.globalVars().serverPort;
 async function main() {
     app.listen(httpServerPort, () => console.log(`http server port No. ${app.settings.port}`));
-
     ghome.startSeekGoogleLoop();
     for (let i = 0; ; i++) {
+        console.log(ghome.getGoogleHomeAddresses());
+        /*
         await ghome.getVolume(speaker_name)
             .then(async v => {
                 console.log(v);
@@ -207,6 +208,7 @@ async function main() {
                 await ut.delay_ms(10000);
             })
             .catch(err => console.debug(err));
+        */
         await ut.delay_ms(1000);
     }
 }
