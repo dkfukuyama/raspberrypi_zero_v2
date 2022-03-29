@@ -24,11 +24,11 @@ function getGHAddrFromName(friendlyname) {
 function startSeekGoogleLoop() {
     stopSeekGoogleLoop();
     gHomeSeekFlag_timeout = setInterval(async () => {
-        secondsCount = (secondsCount + 1) % 20;
-        if (gHomeAddresses == null || gHomeAddresses.length == 0 || secondsCount % 120 == 0) {
-            gHomeAddresses = await seekGoogleHomes(2000);
+        if (gHomeAddresses == null || gHomeAddresses.length == 0 || secondsCount == 0) {
+            gHomeAddresses = await seekGoogleHomes(1000, 0);
         }
-    }, 5000);
+        secondsCount = (secondsCount + 1) % 30;
+    }, 1200);
 }
 
 function stopSeekGoogleLoop() {
@@ -37,16 +37,33 @@ function stopSeekGoogleLoop() {
     }
 }
 
-async function seekGoogleHomes(timeout_ms) {
-    let browser = bonjour.find({ type: 'googlecast' });
-    await ut.delay_ms(timeout_ms);
-    let return_val = [];
-    browser.services.forEach(s => {
-        return_val.push(
-            { address: s.addresses[0], friendlyName: s.txt.fn }
-        );
+async function seekGoogleHomes(timeout, repeatType) {
+    return new Promise((resolve, reject)=>{
+        let return_val = [];
+        //let browser = bonjour.find({ type: 'googlecast' });
+        const browser = bonjour.find({type: 'http'}, function (service){
+            //console.log(service);
+            return_val.push(
+                //{ address: s.addresses[0], friendlyName: s.txt.fn }
+                { address: service.addresses[0], friendlyName: service.name }
+            );
+        });
+        setTimeout(()=>{
+            browser.stop();
+            resolve(return_val);
+        }, timeout);
     });
-    return return_val;
+}
+
+
+function getProperContentType(url){
+    let extType = url.substr(-4);
+    const contentTypes = {
+        '.wav' : 'audio/wav',
+        '.mp3' : 'audio/mpeg',
+        '.mp4' : 'video/mp4',
+    };
+    return contentTypes[extType];
 }
 
 function play(gHomeName, playUrl, playVolume) {
@@ -59,51 +76,43 @@ function play(gHomeName, playUrl, playVolume) {
         const client = new Client();
 
         client.connect({ host: adrs[0] }, function () {
-            console.log('connected, launching app ...');
+            
+            let contentType = getProperContentType(playUrl);
 
+            if(playVolume){
+                client.setVolume({
+                    muted : false,
+                    level : playVolume/100,
+                }, function (err, vol) {
+                    if (err) {
+                        client.close();
+                        reject(err) // handle error
+                    }
+                });
+            }
             client.launch(DefaultMediaReceiver, function (err, player) {
                 var media = {
-
-                    // Here you can plug an URL to any mp4, webm, mp3 or jpg file with the proper contentType.
-                    contentId: 'http://192.168.1.17:8091/g_dlfile/2022-03-26_23-28-13_135.wav',
-                    contentType: 'audio/wav',
-                    //contentType: 'video/mp4',
+                    contentId: 'playUrl',
+                    contentType: contentType,
                     streamType: 'BUFFERED', // or LIVE
-
-                    // Title and cover displayed while buffering
-                    metadata: {
-                        type: 0,
-                        metadataType: 0,
-                        title: "Big Buck Bunny",
-                    }
                 };
 
                 player.on('status', function (status) {
                     console.log('status broadcast playerState=%s', status.playerState);
+                    if(status.playerState == "PLAYING"){
+                        client.close();
+                        resolve();
+                    }
                 });
-
-                console.log('app "%s" launched, loading media %s ...', player.session.displayName, media.contentId);
-
                 player.load(media, { autoplay: true }, function (err, status) {
                     console.log('media loaded playerState=%s', status.playerState);
-
-                    /*
-                    // Seek to 2 minutes after 15 seconds playing.
-                    setTimeout(function () {
-                        player.seek(2 * 60, function (err, status) {
-                            //
-                        });
-                    }, 15000);
-                    */
                 });
-
             });
-
         });
 
         client.on('error', function (err) {
-            console.log('Error: %s', err.message);
             client.close();
+            reject('Error: %s', err.message);
         });
     });
 }
@@ -126,6 +135,34 @@ function interruptPlay(gHomeName, playUrl) {
 
 function interruptAndResumePlay(gHomeName, playUrl) {
 
+}
+
+function setVolume(gHomeName, playVolume) {
+    return new Promise((resolve, reject) => {
+        let adrs = getGHAddrFromName(gHomeName);
+        if (adrs.length == 0) {
+            reject(`the address corresponds to "${gHomeName}" is NOT FOUND!!`);
+            return;
+        }
+        const client = new Client();
+        client.connect({ host: adrs[0] }, function () {
+            client.setVolume({
+                muted : false,
+                level : playVolume/100,
+            }, function (err, vol) {
+                if (err) {
+                    client.close();
+                    reject(err) // handle error
+                }else{
+                    resolve(playVolume);
+                }
+            });
+        });
+        client.on('error', function (err) {
+            client.close();
+            reject(`Error: ${err.message}`);
+        });
+    });
 }
 
 function getVolume(gHomeName) {
@@ -155,7 +192,7 @@ function getVolume(gHomeName) {
 
 
 
-function play_test(host) {
+function sample_play_func(host) {
     const client = new Client();
 
     client.connect({ host: host }, function () {
