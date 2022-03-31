@@ -1,0 +1,169 @@
+LOAD VAL
+[ 'http://192.168.1.17:8091', 'http://192.168.1.17:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+postfunc
+{
+  text: 'あほあほ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '55',
+  submit: 'google'
+}
+\\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_06-40-57_878.wav
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_06-40-57_878.wav
+status broadcast playerState=IDLE
+TypeError: Cannot read property 'playerState' of undefined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\gHomeCnt.js:109:71
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\node_modules\castv2-client\lib\controllers\media.js:75:14
+    at fn.onmessage (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\node_modules\castv2-client\lib\controllers\request-response.js:27:7)
+    at fn.emit (events.js:327:22)
+    at Channel.onmessage (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\node_modules\castv2-client\lib\controllers\controller.js:16:10)
+    at Channel.emit (events.js:315:20)
+    at Client.onmessage (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\node_modules\castv2\lib\channel.js:23:10)
+    at Client.emit (events.js:327:22)
+    at PacketStreamWrapper.onpacket (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\node_modules\castv2\lib\client.js:81:10)
+    at PacketStreamWrapper.emit (events.js:315:20)
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+postfunc
+{
+  text: 'あほあほ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '55',
+  submit: 'google'
+}
+\\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_06-41-08_504.wav
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_06-41-08_504.wav
+"the address corresponds to \"2Fリビング\" is NOT FOUND!!"
+postfunc
+{
+  text: 'あほあほ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '30',
+  submit: 'google'
+}
+\\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_06-41-56_449.wav
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_06-41-56_449.wav
+status broadcast playerState=IDLE
+TypeError: Cannot read property 'playerState' of undefined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\gHomeCnt.js:109:71
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\node_modules\castv2-client\lib\controllers\media.js:75:14
+    at fn.onmessage (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\node_modules\castv2-client\lib\controllers\request-response.js:27:7)
+    at fn.emit (events.js:327:22)
+    at Channel.onmessage (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\node_modules\castv2-client\lib\controllers\controller.js:16:10)
+    at Channel.emit (events.js:315:20)
+    at Client.onmessage (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\node_modules\castv2\lib\channel.js:23:10)
+    at Client.emit (events.js:327:22)
+    at PacketStreamWrapper.onpacket (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\node_modules\castv2\lib\client.js:81:10)
+    at PacketStreamWrapper.emit (events.js:315:20)
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+postfunc
+{
+  text: 'あほあほ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '30',
+  submit: 'google'
+}
+\\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_06-42-00_391.wav
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_06-42-00_391.wav
+"the address corresponds to \"2Fリビング\" is NOT FOUND!!"
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[]
+[]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]

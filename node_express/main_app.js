@@ -209,19 +209,16 @@ async function main() {
 
     app.listen(httpServerPort, () => console.log(`http server port No. ${httpServerPort}`));
     ghome.startSeekGoogleLoop();
-    for (let i = 0; ; i++) {
-        /*
-        await ghome.getVolume(speaker_name)
-            .then(async v => {
-                console.log(v);
-                ghome.play(speaker_name);
-                await ut.delay_ms(10000);
-            })
-            .catch(err => console.debug(err));
-        */
+    for (let i = 0; ; await ut.delay_ms(1000)) {
+        if(ghome.getGoogleHomeAddresses().length){
+            if(i == 0) console.log(ghome.getGoogleHomeAddresses());
+            else{
 
-        await ut.delay_ms(1000);
-        //console.log(ghome.getGoogleHomeAddresses());
+            }
+        }else{
+            i = -1;
+        }
+        i = (i+1)%10000;
     }
 }
 

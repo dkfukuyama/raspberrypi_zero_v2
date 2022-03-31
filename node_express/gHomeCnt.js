@@ -79,6 +79,7 @@ function play(gHomeName, playUrl, playVolume) {
         client.connect({ host: adrs[0] }, function () {
             
             let contentType = getProperContentType(playUrl);
+            console.log([playUrl, contentType]);
 
             if(playVolume){
                 client.setVolume({
@@ -91,22 +92,28 @@ function play(gHomeName, playUrl, playVolume) {
                     }
                 });
             }
+
             client.launch(DefaultMediaReceiver, function (err, player) {
+
                 var media = {
-                    contentId: 'playUrl',
+                    contentId: playUrl,
                     contentType: contentType,
                     streamType: 'BUFFERED', // or LIVE
                 };
 
                 player.on('status', function (status) {
                     console.log('status broadcast playerState=%s', status.playerState);
-                    if(status.playerState == "PLAYING"){
+                    if(status.playerState && status.playerState == "PLAYING"){
                         client.close();
                         resolve();
                     }
                 });
                 player.load(media, { autoplay: true }, function (err, status) {
-                    console.log('media loaded playerState=%s', status.playerState);
+                    if(status?.playerState){
+                        console.log('media loaded playerState=%s', status.playerState);
+                    }else{
+                        console.log('media loaded playerState=NULL_OR_UNDEF');
+                    }
                 });
             });
         });
