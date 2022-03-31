@@ -11,10 +11,10 @@ function getGoogleHomeAddresses() {
     return gHomeAddresses;
 }
 
-function getGHAddrFromName(friendlyname) {
+function getGHAddrFromName(speakerName) {
     let returnval = [];
     gHomeAddresses.forEach((a) => {
-        if (a.friendlyName == friendlyname) {
+        if (a.speakerName == speakerName) {
             returnval.push(a.address);
         }
     });
@@ -46,7 +46,7 @@ async function seekGoogleHomes(timeout, repeatType) {
             //console.log(service);
             return_val.push(
                 //{ address: s.addresses[0], friendlyName: s.txt.fn }
-                { address: service.addresses[0], friendlyName: service.name, speakerName: service.txt.fn }
+                { address: service.addresses[0], friendlyName: service.name, speakerName: service?.txt?.fn ?? '' }
             );
         });
         setTimeout(()=>{
@@ -191,7 +191,30 @@ function getVolume(gHomeName) {
     });
 }
 
-
+function getVolumeAll() {
+    return new Promise((resolve, reject) => {
+        let adrs = getGHAddrFromName(gHomeName);
+        if (adrs.length == 0) {
+            reject(`the address corresponds to "${gHomeName}" is NOT FOUND!!`);
+            return;
+        }
+        const client = new Client();
+        client.connect({ host: adrs[0] }, function () {
+            client.getVolume(function (err, vol) {
+                if (err) {
+                    client.close();
+                    reject(err) // handle error
+                }
+                client.close();
+                resolve(vol) // {"controlType":"attenuation","level":0.7999999523162842,"muted":false,"stepInterval":0.05000000074505806}
+            });
+        });
+        client.on('error', function (err) {
+            client.close();
+            reject(`Error: ${err.message}`);
+        });
+    });
+}
 
 function sample_play_func(host) {
     const client = new Client();
