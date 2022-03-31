@@ -26,7 +26,15 @@ app.set("view engine", "ejs");
 const speaker_name = '2Fリビング';
 let volumeLevel = 30;
 
-page_path_set_index_ejs = [
+let page_path_set_index_ejs = {};
+
+function update_common_paramters(){
+    page_path_set_index_ejs.common = {
+        ghomeSpeakers : ghome.getGoogleHomeAddresses(),
+    }
+}
+
+page_path_set_index_ejs.pages = [
     {
         path: '/',
         title: 'こんにちは、ぐーぐるさんだよ',
@@ -120,7 +128,7 @@ page_path_set_index_ejs = [
     }
 ]
 
-page_path_set_index_ejs.forEach(p =>{
+page_path_set_index_ejs.pages.forEach(p =>{
 
     if(p.postfunc){
         app.post(p.path, async function(req, res, next) {
@@ -149,7 +157,7 @@ page_path_set_index_ejs.forEach(p =>{
                 items: null
             };
             // レンダリングを行う
-            res.render("./index.ejs", {data: data, prevPostData: req.body, pages: page_path_set_index_ejs});
+            res.render("./index.ejs", {data: data, prevPostData: req.body, pages: page_path_set_index_ejs.pages});
 
         }catch(er){
             console.log('CATCH ERROR');
@@ -186,13 +194,15 @@ app.get("*.wav", function (req, res, next){
 app.use(function(req, res, next){
     console.log(`404 NOT FOUND ERROR : ${req.path}`);
     res.status(404);
-    res.render("./ER/404.ejs", {path: req.path, pages: page_path_set_index_ejs });
+    res.render("./ER/404.ejs", {path: req.path, pages: page_path_set_index_ejs.pages });
 });
 
 app.use((err, req, res, next) => {
     res.status(err.status);
-    res.render("./ER/500.ejs", {path: req.path, pages: page_path_set_index_ejs });
+    res.render("./ER/500.ejs", {path: req.path, pages: page_path_set_index_ejs.pages });
 })
+
+
 
 let httpServerPort = vars.globalVars().serverPort;
 async function main() {

@@ -103,21 +103,22 @@ function getCalJsonReturnToText(g) {
   ],
      * 
      */
-    const textparams = {
+    const textparams0 = {
         headerAll : "今日は[date]。予定のお知らせだよーーん",
         headerSchedule: "[i]番目の予定は[shName]。",
         startTime: "開始時刻は[startTime]だよ。",
         noSchedule:"今日はカレンダーに登録されている予定はないよ。"
     }
 
-    let resultsText = textparams.headerAll;
+    let resultsText = textparams0.headerAll;
     if (g.events.length == 0) {
-        resultsText += textparams.noSchedule;
+        resultsText += textparams0.noSchedule;
     } else {
         g.events.forEach(e => {
             resultsText += headerSchedule;
         });
     }
+    return resultsText;
 }
 
 async function speechOnGoogleHomeCal(fname, params){
