@@ -1,55 +1,10 @@
-async function delay_ms(timeout_ms){
-    return new Promise((resolve, reject)=>{
-        setTimeout(()=>resolve(), timeout_ms < 0 ? 0 : timeout_ms);
-    });
-}
-
-const bonjour = require('bonjour')();
-
-async function seekGoogleHomes(timeout_ms){
-
-    let browser = bonjour.find({type: 'googlecast'});
-    await delay_ms(timeout_ms);
-    return browser.services;
-}
-
-async function SetVolumeAsync(device, vol){
-    return new Promise((resolve, reject)=>{
-        let sto = setTimeout(()=>reject(), 5000);
-        device.setVolume(vol, ()=>{
-            console.log(`SetVol ${vol}`);
-            clearTimeout(sto);
-            resolve(); 
-        });
-    });
-}
-
-const ChromecastAPI = require('chromecast-api');
 const path = require('path');
+const vars = require('./variables');
+const gtts = require('./google_tts')
+const gHome = require('./gHomeCnt');
+const request = require('request');
+const ut = require('./utils');
 
-async function playOnGoogleHome(fname, media, params){
-    console.log('playOnGoogleHome');
-    return new Promise((resolve, reject) =>{
-        let sto = setTimeout(()=>reject('time out find google home'), 10000);
-        const client = new ChromecastAPI();
-        client.on('device', async function (device) {
-            console.log(device.friendlyName);
-            if(device.friendlyName == fname){
-                clearTimeout(sto);
-                setTimeout(()=>reject('device play end is not detected time out'), 20000);
-                console.log(`volume set ${params?.volume}`);
-                if(params?.volume){
-                    await SetVolumeAsync(device, params.volume/100);
-                }
-                console.log(media);
-                device.play(media, function (err) {
-                    if (!err) resolve('Play');
-                    else reject(err);
-                });
-            }
-        });
-    });
-}
 
 function getNowDateWithString(){
     let dt = new Date();
@@ -65,9 +20,6 @@ function getNowDateWithString(){
     return result;
 }
 
-
-const vars = require('./variables');
-const gtts = require('./google_tts')
 async function speechOnGoogleHome(fname, params){
     return new Promise(async (resolve, reject)=>{
         try{
@@ -75,44 +27,126 @@ async function speechOnGoogleHome(fname, params){
             let path_togo = (params.outFile ?? getNowDateWithString()) + ".wav";
             // 日付時刻から保存パス設定
             params.outfilePath = path.join(vars.globalVars().saveDir, path_togo);
-            console.log(params.outfilePath);
 
             if(params.reverse_play){
                 params.text = params.text.split("").reverse().join("");
             }
 
-            await gtts.getTtsMp3(params).catch((err)=>reject(err));
-            const fpath = path.join(vars.globalVars().httpDir, path_togo);
-            await playOnGoogleHome(fname, fpath, params).catch((err)=>reject(err));
-            resolve();
+            await gtts.getTtsAudioData(params).catch((err)=>reject(err));
+            const fpath = vars.globalVars().httpDir + "/" + path_togo;
+
+            await gHome.play(fname, fpath, params).then((d)=>resolve(d)).catch((err)=>reject(err));
         }catch(err){
             reject(err);
         }
     });
 }
 
-var request = require('request');
-async function getCalJson(){
+async function getCalJson(sdate, edate){
     return new Promise((resolve, reject)=>{
         setTimeout(()=>reject('Get Cal Timeout'), 30000);
-        var data = [];
 
         var options = {
             url: vars.globalVars().g_calenderSummaryUrl,
-            method: 'GET'
+            method: 'POST',
+            json: true,
+            followAllRedirects: true,
+            form: {
+                startDate:sdate,
+                endDate:edate,
+            }
         };
         try{
             request(options, function (error, response, body) {
                 if(error){
                     reject(error);
                 }else{
-                    resolve(JSON.parse(body));
+                    resolve(body);
                 }
             });
         }catch(er){
             reject(er);
         }
     });
+}
+
+async function getCalDayBetweenJson(date1, date2) {
+    let localtime = new Date(Date.now());
+    let localdate0 = new Date(localtime.getFullYear(), localtime.getMonth(), localtime.getDate() + date1);
+    let localdate1 = new Date(localtime.getFullYear(), localtime.getMonth(), localtime.getDate() + date2 + 1);
+
+    return gtts.getCalJson(
+        localdate0.toLocaleDateString().substring(0, 10).split("/").join("-"),
+        localdate1.toLocaleDateString().substring(0, 10).split("/").join("-")
+    );
+}
+
+function getCalJsonReturnToText(g) {
+    /*
+    events: [
+    {
+      Summary: 'D 千葉県　帰りは凄く遅い',
+      AllDayEvent: true,
+      Title: 'D 千葉県　帰りは凄く遅い',
+      StartTime: '2022-03-30T00:00:00.000Z',
+      EndTime: '2022-03-31T00:00:00.000Z',
+      Location: ''
+    },
+    {
+      Summary: 'YDS',
+      AllDayEvent: false,
+      Title: 'YDS',
+      StartTime: '2022-03-30T01:00:00.000Z',
+      EndTime: '2022-03-30T08:00:00.000Z',
+      Location: ''
+    }
+  ],
+     * 
+     */
+    const textparams = [
+        {
+            headerAll: "今日は[date]。予定のお知らせだよーーん。。",
+            headerSchedule: "[i]番目の予定は[shName]。",
+            startTime: "開始時刻は[startTime]だよ。",
+            noSchedule: "今日はカレンダーに登録されている予定はないよ。"
+        },
+
+        {
+            headerAll: "今日は[date]。予定のお知らせだよーーん。だよーーん。だよーーん。",
+            headerSchedule: "[i]番目の予定は[shName]。",
+            startTime: "開始時刻は[startTime]だよ。",
+            noSchedule: "今日はカレンダーに登録されている予定はないよ。"
+        },
+
+        {
+            headerAll: "ほんじつは[date]。よていのおしらせでござるよ。",
+            headerSchedule: "[i]番目の予定は[shName]。",
+            startTime: "開始時刻は[startTime]でござる。",
+            noSchedule: "今日はカレンダーに登録されている予定はないでござる。"
+        },
+
+        {
+            headerAll: "今日は[date]。予定のお知らせだよーーん。。",
+            headerSchedule: "[i]番目の予定は[shName]。",
+            startTime: "開始時刻は[startTime]だよ。",
+            noSchedule: "今日はカレンダーに登録されている予定はないよ。"
+        },
+    ];
+
+
+    const textparams0 = textparams[ut.getRandomInt(textparams.length)];
+
+    let d = new Date();
+    let wd = ["日", "月", "火", "水", "木", "金", "土"][d.getDay()] + "曜日";
+    let resultsText = textparams0.headerAll.replace("[date]", `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日　${wd}`);
+    if (g.events.length == 0) {
+        resultsText += textparams0.noSchedule;
+    } else {
+        g.events.forEach((e,i) => {
+            resultsText += textparams0.headerSchedule.replace("[i]", i+1).replace("[shName]", e.Summary);;
+        });
+    }
+    return resultsText;
 }
 
 async function speechOnGoogleHomeCal(fname, params){
@@ -123,21 +157,23 @@ async function speechOnGoogleHomeCal(fname, params){
             stay_loop = false;
             await getCalJson().then(async (g)=>
             {
-                console.log(g);
-                params = g;
+                params.text = getCalJsonReturnToText(g);
                 params.volume = 80;
                 params.voiceTypeId = Math.floor(Math.random() * 4);
                 params.pitch = Math.random() * 10 - 5;
-                
-                return speechOnGoogleHome(fname, params);
+
+                console.log(params.text);
+                await speechOnGoogleHome(fname, params).then(d=>resolve(d)).catch(er=>reject(er));
             }).catch(er=>{
                 console.log(er);
                 stay_loop = true;
             });
         }
-        reject();
+        reject('READ CAL ERROR');
     });
 }
 
+exports.getCalJson = getCalJson;
+exports.getCalDayBetweenJson = getCalDayBetweenJson;
 exports.speechOnGoogleHome = speechOnGoogleHome;
 exports.speechOnGoogleHomeCal = speechOnGoogleHomeCal;
