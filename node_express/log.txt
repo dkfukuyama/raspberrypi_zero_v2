@@ -167,3 +167,1773 @@ http server port No. 8091
     speakerName: '2Fリビング'
   }
 ]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '5',
+  submit: 'google'
+}
+\\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_21-53-03_720.wav
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_21-53-03_720.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_21-53-03_720.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+ReferenceError: headerSchedule is not defined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:118:28
+    at Array.forEach (<anonymous>)
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:117:18)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:132:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:130:13
+ReferenceError: headerSchedule is not defined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:118:28
+    at Array.forEach (<anonymous>)
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:117:18)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:132:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:130:13
+ReferenceError: headerSchedule is not defined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:118:28
+    at Array.forEach (<anonymous>)
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:117:18)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:132:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:130:13
+ReferenceError: headerSchedule is not defined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:118:28
+    at Array.forEach (<anonymous>)
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:117:18)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:132:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:130:13
+ReferenceError: headerSchedule is not defined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:118:28
+    at Array.forEach (<anonymous>)
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:117:18)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:132:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:130:13
+ReferenceError: headerSchedule is not defined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:118:28
+    at Array.forEach (<anonymous>)
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:117:18)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:132:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:130:13
+ReferenceError: headerSchedule is not defined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:118:28
+    at Array.forEach (<anonymous>)
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:117:18)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:132:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:130:13
+ReferenceError: headerSchedule is not defined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:118:28
+    at Array.forEach (<anonymous>)
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:117:18)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:132:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:130:13
+ReferenceError: headerSchedule is not defined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:118:28
+    at Array.forEach (<anonymous>)
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:117:18)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:132:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:130:13
+ReferenceError: headerSchedule is not defined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:118:28
+    at Array.forEach (<anonymous>)
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:117:18)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:132:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:130:13
+undefined
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+\\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_21-54-26_484.wav
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_21-54-26_484.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_21-54-26_484.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+\\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_21-56-51_154.wav
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_21-56-51_154.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_21-56-51_154.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん1番目の予定はピアノ。
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-07-12_570.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-07-12_570.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-07-36_827.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-07-36_827.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-08-20_602.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-08-20_602.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+postfunc
+{
+  text: '',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '30',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-08-45_145.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-08-45_145.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+postfunc
+{
+  text: '',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '30',
+  reverse_play: 'true',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-08-52_415.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-08-52_415.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '30',
+  reverse_play: 'true',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-09-02_961.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-09-02_961.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '30',
+  reverse_play: 'true',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-11-01_154.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-11-01_154.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '30',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-11-10_249.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-11-10_249.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '55',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-12-55_019.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-12-55_019.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '55',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-13-42_578.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-13-42_578.wav',
+  'audio/wav',
+  {
+    text: 'うんこ',
+    reverse_play: undefined,
+    pitch: '0',
+    speakingRate: '1',
+    volume: '55',
+    voiceTypeId: '0',
+    outfilePath: '\\\\LANDISK-201129\\disk1\\music\\g_dlfile\\2022-04-01_22-13-42_578.wav'
+  }
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '55',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-15-10_578.wav
+ReferenceError: playvo is not defined
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\gHomeCnt.js:82:48
+    at Client.<anonymous> (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\node_modules\castv2-client\lib\senders\platform.js:61:5)
+    at Object.onceWrapper (events.js:421:28)
+    at Client.emit (events.js:315:20)
+    at TLSSocket.<anonymous> (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\node_modules\castv2\lib\client.js:40:10)
+    at Object.onceWrapper (events.js:421:28)
+    at TLSSocket.emit (events.js:315:20)
+    at TLSSocket.onConnectSecure (_tls_wrap.js:1522:10)
+    at TLSSocket.emit (events.js:315:20)
+    at TLSSocket._finishInit (_tls_wrap.js:932:8)
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '55',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-15-38_637.wav
+"the address corresponds to \"2Fリビング\" is NOT FOUND!!"
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '55',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-15-49_140.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-15-49_140.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '20',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-16-01_483.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-16-01_483.wav',
+  'audio/wav'
+]
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '20',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-17-02_084.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-17-02_084.wav',
+  'audio/wav'
+]
+volume set 20
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '60',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-17-14_469.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-17-14_469.wav',
+  'audio/wav'
+]
+volume set 60
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  text: 'うんこ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '60',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-20-09_747.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-20-09_747.wav',
+  'audio/wav'
+]
+volume set 60
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+PLAYING
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+undefined
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: getRandomInt is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:25)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+undefined
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+ReferenceError: ut is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:36)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: ut is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:36)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: ut is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:36)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: ut is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:36)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: ut is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:36)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: ut is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:36)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: ut is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:36)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: ut is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:36)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: ut is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:36)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+ReferenceError: ut is not defined
+    at getCalJsonReturnToText (C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:136:36)
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:159:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:157:13
+undefined
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+ほんじつは2022年4月1日　金曜日。よていのおしらせでござるよ。1番目の予定はピアノ。
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-49-43_852.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-49-43_852.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+undefined
+postfunc
+{
+  text: 'あああ',
+  voice_type: '0',
+  speed: '1',
+  pitch: '0',
+  volume: '30',
+  submit: 'google'
+}
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-50-12_587.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-50-12_587.wav',
+  'audio/wav'
+]
+volume set 30
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+PLAYING
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。だよーーん。だよーーん。1番目の予定はピアノ。
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-59-07_226.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-59-07_226.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+"READ CAL ERROR"
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+ほんじつは2022年4月1日　金曜日。よていのおしらせでござるよ。1番目の予定はピアノ。
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_22-59-54_427.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_22-59-54_427.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+"READ CAL ERROR"
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-04-03_536.wav
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-04-03_536.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-04-03_536.wav',
+  'audio/wav'
+]
+volume set 80
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-04-02_316.wav',
+  'audio/wav'
+]
+volume set 80
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-04-05_303.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-04-05_303.wav',
+  'audio/wav'
+]
+volume set 80
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。だよーーん。だよーーん。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-04-06_545.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-04-06_545.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+media loaded playerState=NULL_OR_UNDEF
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+media loaded playerState=NULL_OR_UNDEF
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+media loaded playerState=NULL_OR_UNDEF
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+PLAYING
+status broadcast playerState=PLAYING
+status broadcast playerState=PLAYING
+status broadcast playerState=PLAYING
+ほんじつは2022年4月1日　金曜日。よていのおしらせでござるよ。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-04-08_008.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-04-08_008.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-04-09_650.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-04-09_650.wav',
+  'audio/wav'
+]
+volume set 80
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-04-10_998.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-04-10_998.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+ほんじつは2022年4月1日　金曜日。よていのおしらせでござるよ。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-04-12_287.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-04-12_287.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-04-13_654.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-04-13_654.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-04-14_790.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-04-14_790.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+ほんじつは2022年4月1日　金曜日。よていのおしらせでござるよ。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-05-11_874.wav
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-05-11_874.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-05-11_874.wav',
+  'audio/wav'
+]
+volume set 80
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-05-10_698.wav',
+  'audio/wav'
+]
+volume set 80
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-05-13_427.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-05-13_427.wav',
+  'audio/wav'
+]
+volume set 80
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-05-14_596.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-05-14_596.wav',
+  'audio/wav'
+]
+volume set 80
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+media loaded playerState=NULL_OR_UNDEF
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-05-15_748.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-05-15_748.wav',
+  'audio/wav'
+]
+volume set 80
+media loaded playerState=NULL_OR_UNDEF
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+media loaded playerState=NULL_OR_UNDEF
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+media loaded playerState=NULL_OR_UNDEF
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+PLAYING
+status broadcast playerState=PLAYING
+status broadcast playerState=PLAYING
+status broadcast playerState=PLAYING
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-05-16_952.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-05-16_952.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-05-18_402.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-05-18_402.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-05-19_698.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-05-19_698.wav',
+  'audio/wav'
+]
+volume set 80
+ほんじつは2022年4月1日　金曜日。よていのおしらせでござるよ。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+status broadcast playerState=IDLE
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-05-20_901.wav
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-05-20_901.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+TypeError: speechOnGoogleHome(...).then(...).reject is not a function
+    at C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:166:77
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async C:\Users\dfuku\source\Repos\raspberrypi_zero_v2\node_express\google_home.js:158:13
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-05-22_104.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-05-22_104.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。だよーーん。だよーーん。1番目の予定はピアノ。
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-05-46_516.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-05-46_516.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+PLAYING
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-11-09_314.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-11-09_314.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+PLAYING
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。だよーーん。だよーーん。1番目の予定はピアノ。
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-12-39_735.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-12-39_735.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+PLAYING
+postfunc
+{
+  alert_text: 'ログを表示します。',
+  mode: 'system_command',
+  command: 'sudo systemctl status pi_server -n 80 | cat',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+system_command
+sudo systemctl status pi_server -n 80 | cat
+{"killed":false,"code":255,"signal":null,"cmd":"sudo systemctl status pi_server -n 80 | cat"}
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'ログを表示します。',
+  mode: 'system_command',
+  command: 'sudo systemctl status pi_server -n 80 | cat',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+system_command
+sudo systemctl status pi_server -n 80 | cat
+{"killed":false,"code":255,"signal":null,"cmd":"sudo systemctl status pi_server -n 80 | cat"}
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'ログを表示します。',
+  mode: 'system_command',
+  command: 'sudo systemctl status pi_server -n 80 | cat',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+system_command
+sudo systemctl status pi_server -n 80 | cat
+{"killed":false,"code":255,"signal":null,"cmd":"sudo systemctl status pi_server -n 80 | cat"}
+postfunc
+{
+  alert_text: 'ログを表示します。',
+  mode: 'system_command',
+  command: 'sudo systemctl status pi_server -n 80 | cat',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+system_command
+sudo systemctl status pi_server -n 80 | cat
+{"killed":false,"code":255,"signal":null,"cmd":"sudo systemctl status pi_server -n 80 | cat"}
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'ログを表示します。',
+  mode: 'system_command',
+  command: 'sudo systemctl status pi_server -n 80 | cat',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+system_command
+sudo systemctl status pi_server -n 80 | cat
+{"killed":false,"code":255,"signal":null,"cmd":"sudo systemctl status pi_server -n 80 | cat"}
+postfunc
+{
+  alert_text: 'ログを表示します。',
+  mode: 'system_command',
+  command: 'sudo systemctl status pi_server -n 80 | cat',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+system_command
+sudo systemctl status pi_server -n 80 | cat
+{"killed":false,"code":255,"signal":null,"cmd":"sudo systemctl status pi_server -n 80 | cat"}
+postfunc
+{
+  alert_text: 'ログを表示します。',
+  mode: 'system_command',
+  command: 'sudo systemctl status pi_server -n 80 | cat',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+system_command
+sudo systemctl status pi_server -n 80 | cat
+{"killed":false,"code":255,"signal":null,"cmd":"sudo systemctl status pi_server -n 80 | cat"}
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'ログを表示します。',
+  mode: 'system_command',
+  command: 'sudo systemctl status pi_server -n 80 | cat',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+system_command
+sudo systemctl status pi_server -n 80 | cat
+{"killed":false,"code":255,"signal":null,"cmd":"sudo systemctl status pi_server -n 80 | cat"}
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'ログを表示します。',
+  mode: 'system_command',
+  command: 'sudo systemctl status pi_server -n 80 | cat',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+system_command
+sudo systemctl status pi_server -n 80 | cat
+{"killed":false,"code":255,"signal":null,"cmd":"sudo systemctl status pi_server -n 80 | cat"}
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]
+postfunc
+{
+  alert_text: 'ログを表示します。',
+  mode: 'system_command',
+  command: 'sudo systemctl status pi_server -n 80 | cat',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+system_command
+sudo systemctl status pi_server -n 80 | cat
+{"killed":false,"code":255,"signal":null,"cmd":"sudo systemctl status pi_server -n 80 | cat"}
+postfunc
+{
+  alert_text: 'おんせいファイルをしょうきょします。',
+  mode: 'clean_wav',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+clean_wav
+\\LANDISK-201129\disk1\music\g_dlfile
+
+27
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-12-23_584.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-12-40_205.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-18-55_461.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-19-07_139.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-19-16_272.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-19-29_917.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-19-33_737.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-19-38_720.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-25-40_106.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-25-42_400.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-25-52_425.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-25-55_792.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-26-10_015.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-26-25_700.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-26-39_569.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-26-51_775.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-27-07_097.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-28-21_686.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-28-44_658.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-28-57_569.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-29-27_184.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-29-50_204.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-34-17_891.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_02-34-40_761.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_07-04-09_216.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_07-04-35_239.wav
+DELETED
+\\LANDISK-201129\disk1\music\g_dlfile\2022-03-27_07-06-07_954.wav
+DELETED
+postfunc
+{
+  alert_text: 'よていをよみあげます',
+  mode: 'cal_today',
+  return_header: 'text/plain',
+  short_return: true
+}
+COMMAND MODE
+cal_today
+今日は2022年4月1日　金曜日。予定のお知らせだよーーん。。1番目の予定はピアノ。
+Audio content written to file: \\LANDISK-201129\disk1\music\g_dlfile\2022-04-01_23-41-00_959.wav
+[
+  'http://192.168.1.111:8091/g_dlfile/2022-04-01_23-41-00_959.wav',
+  'audio/wav'
+]
+volume set 80
+status broadcast playerState=IDLE
+status broadcast playerState=PLAYING
+media loaded playerState=PLAYING
+PLAYING
+LOAD VAL
+[ 'http://192.168.1.111:8091', 'http://192.168.1.111:8091/g_dlfile' ]
+[ '\\\\LANDISK-201129\\disk1\\music', '/g_dlfile' ]
+http server port No. 8091
+[
+  {
+    address: '192.168.1.20',
+    friendlyName: 'Google-Nest-Mini-9506d702b01a4f50d720f371ea65cef5',
+    speakerName: '2Fリビング'
+  }
+]

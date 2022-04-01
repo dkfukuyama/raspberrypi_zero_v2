@@ -13,8 +13,9 @@
 <br/>
 <button id="show_log">ログをひょうじする</button>
 
-<p id="resXmlHttpRequestObj"></p>
-
+<p>
+	<P id="resXmlHttpRequestObj"></P>
+</p>
 <script>
 	let xhr = new XMLHttpRequest();
 
@@ -81,12 +82,19 @@
 	xhr.setRequestHeader("Content-Type", "application/json");
 
 	xhr.onreadystatechange = function(){
-	//if(xmlhttp.readyState==4 && xmlhttp.status==200){
-        /* XMLデータ取得 */
-        document.getElementById("resXmlHttpRequestObj").innerText=xhr.responseText;
-    //}
-  }
+	/* XMLデータ取得 */
+	let data = xhr.responseText;
+	let j = null;
+	try {
+		j = JSON.parse(data);
+		document.getElementById("resXmlHttpRequestObj").innerText=JSON.stringify(j,null,"\r");
+	} catch (error) {
+	document.getElementById("resXmlHttpRequestObj").innerText=data;
+	}
 
-  xhr.send(snd);
-}
+
+	}
+
+	xhr.send(snd);
+	}
 </script>

@@ -67,7 +67,7 @@ function getProperContentType(url){
     return contentTypes[extType];
 }
 
-function play(gHomeName, playUrl, playVolume) {
+function play(gHomeName, playUrl, params) {
     return new Promise((resolve, reject) => {
         let adrs = getGHAddrFromName(gHomeName);
         if (adrs.length == 0) {
@@ -76,15 +76,16 @@ function play(gHomeName, playUrl, playVolume) {
         }
         const client = new Client();
 
-        client.connect({ host: adrs[0] }, function () {
+        client.connect({ host: adrs[0] }, async function () {
             
             let contentType = getProperContentType(playUrl);
             console.log([playUrl, contentType]);
 
-            if(playVolume){
+            if (params.volume) {
+                console.log(`volume set ${params.volume}`);
                 client.setVolume({
                     muted : false,
-                    level : playVolume/100,
+                    level: params.volume/100,
                 }, function (err, vol) {
                     if (err) {
                         client.close();
@@ -105,7 +106,7 @@ function play(gHomeName, playUrl, playVolume) {
                     console.log('status broadcast playerState=%s', status.playerState);
                     if(status.playerState && status.playerState == "PLAYING"){
                         client.close();
-                        resolve();
+                        resolve("PLAYING");
                     }
                 });
                 player.load(media, { autoplay: true }, function (err, status) {
