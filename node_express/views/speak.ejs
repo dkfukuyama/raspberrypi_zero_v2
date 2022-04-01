@@ -29,7 +29,9 @@
             value="<%- vol %>"><div id="volume_value"><%- vol %></div>
     </P>
     
-    <P><input type="checkbox" name="reverse_play" value="true">はんたいことば</P>
+    <P><input type="checkbox" name="reverse_play" value="true" <%- prevPostData?.reverse_play ? 'checked' : '' %>>はんたいことば</P>
+
+    
 
     <button type="submit" value="google" name="submit">ぐーぐるさんがしゃべる</button>
     <button type="submit" value="oto" name="submit">おとうさんにおくる</button>

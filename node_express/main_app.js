@@ -2,13 +2,39 @@
 const app = express();
 const path = require('path');
 const gtts = require('./google_home')
+const favicon = require('express-favicon');
 const vars = require('./variables');
 const exec = require('child_process').exec;
+const bodyParser = require('body-parser');
+const { google } = require("@google-cloud/text-to-speech/build/protos/protos");
+
+const ghome = require('./gHomeCnt');
+const ut = require('./utils');
 
 
-const speaker_name = 'リビングルーム';
+app.use(favicon(path.join(__dirname, '/views/ico/favicon.png')));
 
-page_path_set_index_ejs = [
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(express.json());
+
+// テンプレートエンジンの指定
+app.set("view engine", "ejs");
+
+
+const speaker_name = '2Fリビング';
+let volumeLevel = 30;
+
+let page_path_set_index_ejs = {};
+
+function update_common_paramters(){
+    page_path_set_index_ejs.common = {
+        ghomeSpeakers : ghome.getGoogleHomeAddresses(),
+    }
+}
+
+page_path_set_index_ejs.pages = [
     {
         path: '/',
         title: 'こんにちは、ぐーぐるさんだよ',
@@ -26,8 +52,8 @@ page_path_set_index_ejs = [
                     text: req.body.text,
                     reverse_play: req.body.reverse_play,
                     pitch : req.body.pitch,
-                    speakingRate : req.body.speed,
-                    volume : req.body.volume ?? 0.4,
+                    speakingRate: req.body.speed,
+                    volume: req.body.volume,
                     voiceTypeId : req.body.voice_type
                 }
             );
@@ -102,17 +128,7 @@ page_path_set_index_ejs = [
     }
 ]
 
-const bodyParser = require('body-parser');
-const internal = require("stream");
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(express.json());
-
-// テンプレートエンジンの指定
-app.set("view engine", "ejs");
-
-page_path_set_index_ejs.forEach(p =>{
+page_path_set_index_ejs.pages.forEach(p =>{
 
     if(p.postfunc){
         app.post(p.path, async function(req, res, next) {
@@ -141,7 +157,7 @@ page_path_set_index_ejs.forEach(p =>{
                 items: null
             };
             // レンダリングを行う
-            res.render("./index.ejs", {data: data, prevPostData: req.body, pages: page_path_set_index_ejs});
+            res.render("./index.ejs", {data: data, prevPostData: req.body, pages: page_path_set_index_ejs.pages});
 
         }catch(er){
             console.log('CATCH ERROR');
@@ -178,12 +194,32 @@ app.get("*.wav", function (req, res, next){
 app.use(function(req, res, next){
     console.log(`404 NOT FOUND ERROR : ${req.path}`);
     res.status(404);
-    res.render("./ER/404.ejs", {path: req.path, pages: page_path_set_index_ejs });
+    res.render("./ER/404.ejs", {path: req.path, pages: page_path_set_index_ejs.pages });
 });
 
 app.use((err, req, res, next) => {
     res.status(err.status);
-    res.render("./ER/500.ejs", {path: req.path, pages: page_path_set_index_ejs });
+    res.render("./ER/500.ejs", {path: req.path, pages: page_path_set_index_ejs.pages });
 })
 
-app.listen(vars.globalVars().serverPort, ()=>console.log(vars.globalVars().serverPort));
+
+
+let httpServerPort = vars.globalVars().serverPort;
+async function main() {
+
+    app.listen(httpServerPort, () => console.log(`http server port No. ${httpServerPort}`));
+    ghome.startSeekGoogleLoop();
+    for (let i = 0; ; await ut.delay_ms(1000)) {
+        if(ghome.getGoogleHomeAddresses().length){
+            if(i == 0) console.log(ghome.getGoogleHomeAddresses());
+            else{
+
+            }
+        }else{
+            i = -1;
+        }
+        i = (i+1)%10000;
+    }
+}
+
+main();
