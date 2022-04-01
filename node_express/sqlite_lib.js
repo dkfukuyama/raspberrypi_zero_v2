@@ -59,11 +59,13 @@ function InitDB(dbpath){
                 age INTEGER NOT NULL
             )
             `,GetResults);
+            /*
             var insertData = db.prepare('INSERT INTO FamilyMembers VALUES (?, ?, ?)');
             insertData.run([1, 'あああああ', 9], GetResults); 
             insertData.run([2, 'いいいいい', 7], GetResults);
             insertData.run([3, 'ううううう', 4], GetResults);
             insertData.finalize();
+            */
             db.run(`
             CREATE TABLE IF NOT EXISTS Quiz(
                 id INTEGER PRIMARY KEY,
@@ -132,7 +134,6 @@ async function AddQuiz(id, right, wrong1, wrong2){
 }
 */
 
-
 async function AddQuiz(dbpath, memberName, right, wrong1, wrong2, quizid=-1){
     var res = await GetIdFromName(dbpath, memberName);
     if(res.results == -1){
@@ -192,8 +193,6 @@ function AddQuizByMemberId(dbpath, memberId, right, wrong1, wrong2, quizid=-1){
         });
     }
 }
-
-
 
 
 function RemoveQuiz(dbpath, removeId){
@@ -276,7 +275,7 @@ async function main(){
 }
 */
 
-
+/*
 const logDbName = './log_data.db';
 function main(){
     var input = '';
@@ -297,3 +296,4 @@ function main(){
 //
 
 main();
+*/
