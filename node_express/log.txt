@@ -1937,3 +1937,895 @@ http server port No. 8091
     speakerName: '2Fリビング'
   }
 ]
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'express'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:1:18)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+Error: Cannot find module 'C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\node_modules\raw-body\node_modules\iconv-lite\lib\index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (node:internal/modules/cjs/loader:353:19)
+    at Function.Module._findPath (node:internal/modules/cjs/loader:566:18)
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:919:27)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\node_modules\raw-body\index.js:17:13)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12) {
+  code: 'MODULE_NOT_FOUND',
+  path: 'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\node_modules\\raw-body\\node_modules\\iconv-lite\\package.json',
+  requestPath: 'iconv-lite'
+}
+LOAD VAL
+[ 'http://192.168.1.15:8091', 'http://192.168.1.15:8091/g_dlfile' ]
+[ undefined, '/g_dlfile' ]
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:371:5)
+    at validateString (node:internal/validators:119:11)
+    at Object.join (node:path:429:7)
+    at globalVars (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\variables.js:35:36)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\variables.js:71:1)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+Error: Cannot find module 'google-gax'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\node_modules\@google-cloud\text-to-speech\build\src\v1\text_to_speech_client.js
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\node_modules\@google-cloud\text-to-speech\build\src\v1\index.js
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\node_modules\@google-cloud\text-to-speech\build\src\index.js
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\google_tts.js
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\google_home.js
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\node_modules\@google-cloud\text-to-speech\build\src\v1\text_to_speech_client.js:22:13)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\node_modules\\@google-cloud\\text-to-speech\\build\\src\\v1\\text_to_speech_client.js',
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\node_modules\\@google-cloud\\text-to-speech\\build\\src\\v1\\index.js',
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\node_modules\\@google-cloud\\text-to-speech\\build\\src\\index.js',
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\google_tts.js',
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\google_home.js',
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+LOAD VAL
+[ 'http://192.168.1.15:8091', 'http://192.168.1.15:8091/g_dlfile' ]
+[ undefined, '/g_dlfile' ]
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:371:5)
+    at validateString (node:internal/validators:119:11)
+    at Object.join (node:path:429:7)
+    at globalVars (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\variables.js:35:36)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\variables.js:71:1)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+Error: Cannot find module 'google-gax'
+Require stack:
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\node_modules\@google-cloud\text-to-speech\build\src\v1\text_to_speech_client.js
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\node_modules\@google-cloud\text-to-speech\build\src\v1\index.js
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\node_modules\@google-cloud\text-to-speech\build\src\index.js
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\google_tts.js
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\google_home.js
+- C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:61:29)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\node_modules\@google-cloud\text-to-speech\build\src\v1\text_to_speech_client.js:22:13)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.Hook._require.Module.require (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:80:39) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\node_modules\\@google-cloud\\text-to-speech\\build\\src\\v1\\text_to_speech_client.js',
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\node_modules\\@google-cloud\\text-to-speech\\build\\src\\v1\\index.js',
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\node_modules\\@google-cloud\\text-to-speech\\build\\src\\index.js',
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\google_tts.js',
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\google_home.js',
+    'C:\\Users\\fuku333\\Source\\Repos\\raspberrypi_zero_v2\\node_express\\main_app.js'
+  ]
+}
+LOAD VAL
+[ 'http://192.168.1.15:8091', 'http://192.168.1.15:8091/g_dlfile' ]
+[ undefined, '/g_dlfile' ]
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:371:5)
+    at validateString (node:internal/validators:119:11)
+    at Object.join (node:path:429:7)
+    at globalVars (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\variables.js:35:36)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\variables.js:71:1)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+LOAD VAL
+[ 'http://192.168.1.15:8091', 'http://192.168.1.15:8091/g_dlfile' ]
+[ undefined, '/g_dlfile' ]
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:371:5)
+    at validateString (node:internal/validators:119:11)
+    at Object.join (node:path:429:7)
+    at Object.globalVars (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\variables.js:35:36)
+    at Object.<anonymous> (C:\Users\fuku333\Source\Repos\raspberrypi_zero_v2\node_express\main_app.js:232:27)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Object.<anonymous> (C:\Users\fuku333\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+http server port No. 8091
