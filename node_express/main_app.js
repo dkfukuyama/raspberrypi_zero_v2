@@ -60,7 +60,7 @@ page_path_set_index_ejs.pages = [
                         }
                     );
                     break;
-                case 'otosan':
+                case 'otosan':/*
                     return gtts.speechOnGoogleHome(
                         speaker_name,
                         {
@@ -73,11 +73,38 @@ page_path_set_index_ejs.pages = [
                         }
                     ).then(() => mail.SendText('ぐーぐるだよ', req.body.text);
                     );
+                    */
+            }
         },
         specialParams:{
             voiceTypes : require('./google_tts').voiceType,
         },
     },
+    {
+        path: '/calculator',
+        title: 'でんたく',
+        view_page: './calculator.ejs',
+        level: 0,
+        postfunc: async (req, res)=>{
+            return gtts.speechOnGoogleHome(
+                speaker_name, 
+                {
+                    text: req.body.text,
+                    reverse_play: req.body.reverse_play,
+                    pitch : req.body.pitch,
+                    speakingRate: req.body.speed,
+                    volume: req.body.volume,
+                    voiceTypeId : req.body.voice_type
+                }
+            );
+        },
+        specialParams:{
+            voiceTypes : require('./google_tts').voiceType,
+        },
+    },
+
+
+
     {
         path: '/music',
         title: 'おんがくをかける',

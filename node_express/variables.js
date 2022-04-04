@@ -15,11 +15,11 @@ function globalVars(){
             GL_VARS.httpDir0 = `http://${getLocalAddress().ipv4[0].address}:${GL_VARS.serverPort}`;
             GL_VARS.httpDir = GL_VARS.httpDir0 + GL_VARS.voiceSubDir;
 
-
             GL_VARS.g_calenderSummaryUrl = process.env.G_CAL_SUM;
 
             switch(process.env.COMPUTERNAME){
                 case 'FUKU333_DESKTOP':
+                case 'FUKU333-PC':
                     GL_VARS.saveDir0 = "\\\\LANDISK-201129\\disk1\\music";
                     break;
                 case 'PI_ZERO_01':
@@ -29,9 +29,13 @@ function globalVars(){
                     GL_VARS.saveDir0 = __dirname;
             }
 
-            console.log([GL_VARS.httpDir0, GL_VARS.httpDir]);
-            console.log([GL_VARS.saveDir0, GL_VARS.voiceSubDir]);
-           
+            console.log({
+                httpDir0:GL_VARS.httpDir0, 
+                httpDir: GL_VARS.httpDir,
+                saveDir0: GL_VARS.saveDir0, 
+                voiceSubDir: GL_VARS.voiceSubDir
+            });
+            
             GL_VARS.saveDir = path.join(GL_VARS.saveDir0, GL_VARS.voiceSubDir);
 
             GL_VARS.gmail_addr = process.env.GMAIL_ADDR || '';
