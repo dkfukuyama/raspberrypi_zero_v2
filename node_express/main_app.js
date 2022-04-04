@@ -8,9 +8,9 @@ const exec = require('child_process').exec;
 const bodyParser = require('body-parser');
 const { google } = require("@google-cloud/text-to-speech/build/protos/protos");
 
+const mail = require('nodemailer');
 const ghome = require('./gHomeCnt');
 const ut = require('./utils');
-
 
 app.use(favicon(path.join(__dirname, '/views/ico/favicon.png')));
 
@@ -45,18 +45,34 @@ page_path_set_index_ejs.pages = [
         title: 'しゃべらせたいとき',
         view_page: './speak.ejs',
         level: 0,
-        postfunc: async (req, res)=>{
-            return gtts.speechOnGoogleHome(
-                speaker_name, 
-                {
-                    text: req.body.text,
-                    reverse_play: req.body.reverse_play,
-                    pitch : req.body.pitch,
-                    speakingRate: req.body.speed,
-                    volume: req.body.volume,
-                    voiceTypeId : req.body.voice_type
-                }
-            );
+        postfunc: async (req, res) => {
+            switch (req.body.submit) {
+                case 'google':
+                    return gtts.speechOnGoogleHome(
+                        speaker_name,
+                        {
+                            text: req.body.text,
+                            reverse_play: req.body.reverse_play,
+                            pitch: req.body.pitch,
+                            speakingRate: req.body.speed,
+                            volume: req.body.volume,
+                            voiceTypeId: req.body.voice_type
+                        }
+                    );
+                    break;
+                case 'otosan':
+                    return gtts.speechOnGoogleHome(
+                        speaker_name,
+                        {
+                            text: req.body.text,
+                            reverse_play: req.body.reverse_play,
+                            pitch: req.body.pitch,
+                            speakingRate: req.body.speed,
+                            volume: req.body.volume,
+                            voiceTypeId: req.body.voice_type
+                        }
+                    ).then(() => mail.SendText('ぐーぐるだよ', req.body.text);
+                    );
         },
         specialParams:{
             voiceTypes : require('./google_tts').voiceType,

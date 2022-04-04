@@ -31,8 +31,12 @@ function globalVars(){
 
             console.log([GL_VARS.httpDir0, GL_VARS.httpDir]);
             console.log([GL_VARS.saveDir0, GL_VARS.voiceSubDir]);
-            
+           
             GL_VARS.saveDir = path.join(GL_VARS.saveDir0, GL_VARS.voiceSubDir);
+
+            GL_VARS.gmail_addr = process.env.GMAIL_ADDR || '';
+            GL_VARS.gmail_pass = process.env.GMAIL_PASS || '';
+
             firstTry = false;
         }
     }catch(err){
