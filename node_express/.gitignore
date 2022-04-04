@@ -1,4 +1,5 @@
 g_dlfile/*.wav
 *.txt
+.vs/
 
 
