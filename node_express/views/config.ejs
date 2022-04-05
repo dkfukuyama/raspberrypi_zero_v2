@@ -1,5 +1,4 @@
-<% let sp_op = page?.specialParams?.operators %>
-<% let g_addr = sp_op.getGoogleHomeAddresses() %>
+<% let g_addr = common.ghomeSpeakers %>
 <P>みつかったぐーぐるすぴーかー</P>
 <% if(g_addr.length == 0){ %>
 	<%- '<P>ないよ。</p>' %>

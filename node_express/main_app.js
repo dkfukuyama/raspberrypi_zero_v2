@@ -8,9 +8,10 @@ const exec = require('child_process').exec;
 const bodyParser = require('body-parser');
 const { google } = require("@google-cloud/text-to-speech/build/protos/protos");
 
-const mail = require('nodemailer');
+const mail = require('./send_mail');
 const ghome = require('./gHomeCnt');
 const ut = require('./utils');
+const { resolve } = require("path");
 
 app.use(favicon(path.join(__dirname, '/views/ico/favicon.png')));
 
@@ -21,7 +22,6 @@ app.use(express.json());
 
 // テンプレートエンジンの指定
 app.set("view engine", "ejs");
-
 
 const speaker_name = '2Fリビング';
 let volumeLevel = 30;
@@ -46,25 +46,28 @@ page_path_set_index_ejs.pages = [
         view_page: './speak.ejs',
         level: 0,
         postfunc: async (req, res) => {
-            switch (req.body.submit) {
-                case 'google':
-                    console.log('グーグルスピーカーモード');
-                    return gtts.speechOnGoogleHome(
-                        speaker_name,
-                        {
-                            text: req.body.text,
-                            reverse_play: req.body.reverse_play,
-                            pitch: req.body.pitch,
-                            speakingRate: req.body.speed,
-                            volume: req.body.volume,
-                            voiceTypeId: req.body.voice_type
-                        }
-                    );
-                    break;
+            console.log(`req.body.submit = ${req.body.submit}`);
+            let speaker_name = '';
+            if(req.body.submit.startsWith('google|')){
+                console.log('グーグルスピーカーモード');
+                speaker_name = req.body.submit.replace('google|','');
+                console.log(speaker_name);
+                return gtts.speechOnGoogleHome(
+                    speaker_name,
+                    {
+                        text: req.body.text,
+                        reverse_play: req.body.reverse_play,
+                        pitch: req.body.pitch,
+                        speakingRate: req.body.speed,
+                        volume: req.body.volume,
+                        voiceTypeId: req.body.voice_type
+                    }
+                );
+            }else switch (req.body.submit) {
                 case 'otosan':
                     console.log('おとうさん送信モード');
                     return gtts.speechOnGoogleHome(
-                        speaker_name,
+                        '',
                         {
                             text: req.body.text,
                             reverse_play: req.body.reverse_play,
@@ -73,14 +76,16 @@ page_path_set_index_ejs.pages = [
                             volume: req.body.volume,
                             voiceTypeId: req.body.voice_type
                         }
-                    ).then(() => mail.SendText('ぐーぐるだよ', req.body.text)
-                    );
-                
+                    ).then(() => {
+                        let mailer = new mail.NodeMailer();
+                        mailer.SendText('ぐーぐるだよ', req.body.text);
+                    }).catch(er=>console.log(er)).then((d)=>resolve(d));
             }
+            return;
         },
-        specialParams:{
+        specialParams : {
             voiceTypes : require('./google_tts').voiceType,
-        },
+        }
     },
     {
         path: '/calculator',
@@ -150,7 +155,7 @@ page_path_set_index_ejs.pages = [
                 console.log(req.body.mode);
                 switch(req.body.mode){
                 case 'cal_today' :
-                    return gtts.speechOnGoogleHomeCal(speaker_name, {});
+                    return gtts.speechOnGoogleHomeCal(ghome.getGoogleHomeAddresses()[0].speakerName, {});
                 case 'clean_wav':
                     return new Promise((resolve, _) => resolve(require('./clean').clean_wav(100)));
                 case 'system_command' :

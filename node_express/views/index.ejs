@@ -10,7 +10,7 @@
 
         <% if(data.page.view_page) { %>
             <% try { %>
-                <%- include(data.page.view_page, {items: data.items ?? null, page: data.page}) %>
+                <%- include(data.page.view_page, {items: data.items ?? null, page: data.page, common:common}) %>
             <% }catch (err){ %>
                 <P><H2>いまはみられないよ</H2><%- data.page.view_page %></P>
                 <P><%- err %></P>

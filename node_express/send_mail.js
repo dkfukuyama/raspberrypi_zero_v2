@@ -20,10 +20,11 @@ class NodeMailer {
         }
         console.log(this.smtpConfig);
     }
-    SendTextAsync(subject, text) {
+    SendText(subject, text) {
         let senddata = this.data;
         senddata.subject = subject;
         senddata.text = text;
+        console.log(senddata);
         this.transporter.sendMail(senddata, this.sendCallBack);
     }
     SendTextAndAttachment() {
@@ -40,6 +41,8 @@ class NodeMailer {
         }
     }
 };
+
+exports.NodeMailer = NodeMailer;
 
 /*
 function test(){

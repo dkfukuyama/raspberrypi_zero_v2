@@ -35,7 +35,8 @@ async function speechOnGoogleHome(fname, params){
             await gtts.getTtsAudioData(params).catch((err)=>reject(err));
             const fpath = vars.globalVars().httpDir + "/" + path_togo;
 
-            await gHome.play(fname, fpath, params).then((d)=>resolve(d)).catch((err)=>reject(err));
+            if(fname) await gHome.play(fname, fpath, params).then((d)=>resolve(d)).catch((err)=>reject(err));
+            else resolve();
         }catch(err){
             reject(err);
         }
