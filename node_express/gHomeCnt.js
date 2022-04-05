@@ -45,6 +45,7 @@ async function seekGoogleHomes(timeout, repeatType) {
             function (service) {
             //console.log(service);
             return_val.push(
+                //{ address: s.addresses[0], friendlyName: s.txt.fn }
                 { address: service.addresses[0], friendlyName: service.name, speakerName: service?.txt?.fn ?? '' }
             );
         });
