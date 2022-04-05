@@ -48,6 +48,7 @@ page_path_set_index_ejs.pages = [
         postfunc: async (req, res) => {
             switch (req.body.submit) {
                 case 'google':
+                    console.log('グーグルスピーカーモード');
                     return gtts.speechOnGoogleHome(
                         speaker_name,
                         {
@@ -60,7 +61,8 @@ page_path_set_index_ejs.pages = [
                         }
                     );
                     break;
-                case 'otosan':/*
+                case 'otosan':
+                    console.log('おとうさん送信モード');
                     return gtts.speechOnGoogleHome(
                         speaker_name,
                         {
@@ -71,9 +73,9 @@ page_path_set_index_ejs.pages = [
                             volume: req.body.volume,
                             voiceTypeId: req.body.voice_type
                         }
-                    ).then(() => mail.SendText('ぐーぐるだよ', req.body.text);
+                    ).then(() => mail.SendText('ぐーぐるだよ', req.body.text)
                     );
-                    */
+                
             }
         },
         specialParams:{
@@ -99,7 +101,7 @@ page_path_set_index_ejs.pages = [
             );
         },
         specialParams:{
-            voiceTypes : require('./google_tts').voiceType,
+            voiceTypes: require('./google_tts').voiceType,
         },
     },
 
@@ -135,7 +137,12 @@ page_path_set_index_ejs.pages = [
         path: '/config',
         title: 'かんり、せってい',
         view_page: './config.ejs',
-        level: 0
+        level: 0,
+        specialParams: {
+            operators: {
+                getGoogleHomeAddresses: () => ghome.getGoogleHomeAddresses(),
+            }
+        }
     },
     {
         path: '/command',
