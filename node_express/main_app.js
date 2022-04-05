@@ -138,11 +138,6 @@ page_path_set_index_ejs.pages = [
         title: 'かんり、せってい',
         view_page: './config.ejs',
         level: 0,
-        specialParams: {
-            operators: {
-                getGoogleHomeAddresses: () => ghome.getGoogleHomeAddresses(),
-            }
-        }
     },
     {
         path: '/command',
@@ -207,7 +202,13 @@ page_path_set_index_ejs.pages.forEach(p =>{
                 items: null
             };
             // レンダリングを行う
-            res.render("./index.ejs", {data: data, prevPostData: req.body, pages: page_path_set_index_ejs.pages});
+            update_common_paramters();
+            res.render("./index.ejs", {
+                data: data, 
+                prevPostData: req.body, 
+                pages: page_path_set_index_ejs.pages,
+                common: page_path_set_index_ejs.common
+            });
 
         }catch(er){
             console.log('CATCH ERROR');
