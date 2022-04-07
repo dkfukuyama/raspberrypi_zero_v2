@@ -76,9 +76,9 @@ page_path_set_index_ejs.pages = [
                             volume: req.body.volume,
                             voiceTypeId: req.body.voice_type
                         }
-                    ).then(() => {
+                    ).then((params) => {
                         let mailer = new mail.NodeMailer();
-                        mailer.SendText('ぐーぐるだよ', req.body.text);
+                        mailer.SendTextAndAttachment('ぐーぐるだよ', req.body.text, params.outfilePath);
                     }).catch(er=>console.log(er)).then((d)=>resolve(d));
             }
             return;

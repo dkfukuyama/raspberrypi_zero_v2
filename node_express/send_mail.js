@@ -27,8 +27,17 @@ class NodeMailer {
         console.log(senddata);
         this.transporter.sendMail(senddata, this.sendCallBack);
     }
-    SendTextAndAttachment() {
-
+    SendTextAndAttachment(subject, text, att_path) {
+        let senddata = this.data;
+        senddata.subject = subject;
+        senddata.text = text;
+        senddata.attachments = [
+            {
+                filename: 'att.wav',
+                path: att_path
+            }
+        ];
+        this.transporter.sendMail(senddata, this.sendCallBack);
     }
 
     sendCallBack(err, info){
