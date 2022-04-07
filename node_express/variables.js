@@ -22,11 +22,14 @@ function globalVars(){
                 case 'FUKU333-PC':
                     GL_VARS.saveDir0 = "\\\\LANDISK-201129\\disk1\\music";
                     break;
-                case 'PI_ZERO_01':
-                    GL_VARS.saveDir0 = "/mnt/nas_music";
-                    break;
                 case 'KAIHATU-Z440A':
                     GL_VARS.saveDir0 = __dirname;
+                    break;
+                case 'PI_ZERO_01':
+                default:
+                    GL_VARS.saveDir0 = "/mnt/nas_music";
+                    break;
+    
             }
 
             console.log({
