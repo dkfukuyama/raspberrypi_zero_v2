@@ -9,7 +9,7 @@ function globalVars(){
         if(firstTry || GL_VARS.errorFlag){
             console.log("LOAD VAL");
             GL_VARS.errorFlag = true;
-            GL_VARS.serverPort = (process.env.SERVER_PORT ?? 8091);
+            GL_VARS.serverPort = (process.env.SERVER_PORT ?? 80);
             GL_VARS.voiceSubDir = (process.env.VOICE_SUBDIR ?? '/g_dlfile');
 
             GL_VARS.httpDir0 = `http://${getLocalAddress().ipv4[0].address}:${GL_VARS.serverPort}`;
@@ -26,6 +26,7 @@ function globalVars(){
                     GL_VARS.saveDir0 = __dirname;
                     break;
                 case 'PI_ZERO_01':
+                case 'PI_2B_01':
                 default:
                     GL_VARS.saveDir0 = "/mnt/nas_music";
                     break;

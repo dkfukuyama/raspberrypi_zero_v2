@@ -30,15 +30,19 @@
     </P>
     
     <P><input type="checkbox" name="reverse_play" value="true" <%- prevPostData?.reverse_play ? 'checked' : '' %>>はんたいことば</P>
+    <P>これはじっけんちゅうです。まだできませんよ。</P>
+    <P><input type="checkbox" name="effects_robot" value="true" <%- prevPostData?.effects_robot ? 'checked' : '' %>>ロボット</P>
+    <P><input type="checkbox" name="effects_yamabiko" value="true" <%- prevPostData?.effects_yamabiko ? 'checked' : '' %>>やまびこ</P>
 
     <% let g_addr = common.ghomeSpeakers %>
     <% if(g_addr.length == 0){ %>
         <%- '<P>ねっとわーくのなかに、ぐーぐるさんがみつかりません</p>' %>
     <% } else g_addr.forEach(e=> {%>
-    <button type="submit" value="google|<%- e.speakerName %>" name="submit">ぐーぐるさん(<%- e.speakerName %>)がしゃべる</button>
+    <button class="btn btn-primary" type="submit" value="google|<%- e.speakerName %>" name="submit">ぐーぐるさん(<%- e.speakerName %>)がしゃべる</button>
+    <BR/>
     <BR/>
     <% }) %>
-    <button type="submit" value="otosan" name="submit">おとうさんにおくる</button>
+    <button class="btn btn-secondary" type="submit" value="otosan" name="submit">おとうさんにおくる</button>
 </form>
 
 
