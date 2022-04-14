@@ -46,7 +46,7 @@ async function speechOnGoogleHome(fname, params){
                 console.log('ROBOT');
                 const outpath2 = params.outfilePath.replace(".wav", "_sox.wav");
                 path_togo = path_togo.replace(".wav", "_sox.wav");
-                const commandLine = `sox ${params.outfilePath} ${outpath2} chorus 0.9 0.9 20.0 1 0.25 2.0 -t`;
+                const commandLine = `sox ${params.outfilePath} ${outpath2} chorus 1 1 100.0 1 5 5.0 -s`;
                 execSync(commandLine);
                 console.log(commandLine);
             }
