@@ -40,9 +40,7 @@ function stopSeekGoogleLoop() {
 
 async function seekGoogleHomes(timeout, repeatType) {
 
-    bonjour.publish({ name: process.env.COMPUTERNAME, type: 'http',  port: vars.globalVars().serverPort});
-
-    return new Promise((resolve, _)=>{
+     return new Promise((resolve, _)=>{
         let return_val = [];
         const browser = bonjour.find({ type: 'googlecast' },
         //const browser = bonjour.find({ type: 'http' },

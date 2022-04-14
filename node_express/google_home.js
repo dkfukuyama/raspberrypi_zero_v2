@@ -4,7 +4,7 @@ const gtts = require('./google_tts')
 const gHome = require('./gHomeCnt');
 const request = require('request');
 const ut = require('./utils');
-
+const execSync = require('child_process').execSync;
 
 function getNowDateWithString(){
     let dt = new Date();
@@ -33,6 +33,25 @@ async function speechOnGoogleHome(fname, params){
             }
 
             await gtts.getTtsAudioData(params).catch((err)=>reject(err));
+
+            if(params.effects_yamabiko){
+               console.log('YAMABIKO');
+               const outpath2 = params.outfilePath.replace(".wav", "_sox.wav");
+               path_togo = path_togo.replace(".wav", "_sox.wav");
+               const commandLine = `sox ${params.outfilePath} ${outpath2} reverb`;
+               execSync(commandLine);
+               console.log(commandLine);
+            }
+            if(params.effects_robot){
+                console.log('ROBOT');
+                const outpath2 = params.outfilePath.replace(".wav", "_sox.wav");
+                path_togo = path_togo.replace(".wav", "_sox.wav");
+                const commandLine = `sox ${params.outfilePath} ${outpath2} chorus 0.9 0.9 20.0 1 0.25 2.0 -t`;
+                execSync(commandLine);
+                console.log(commandLine);
+            }
+
+
             const fpath = vars.globalVars().httpDir + "/" + path_togo;
 
             if(fname) await gHome.play(fname, fpath, params).then((d)=>resolve(d)).catch((err)=>reject(err));

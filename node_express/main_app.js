@@ -58,6 +58,8 @@ page_path_set_index_ejs.pages = [
                         text: req.body.text,
                         reverse_play: req.body.reverse_play,
                         pitch: req.body.pitch,
+                        effects_yamabiko: req.body.effects_yamabiko,
+                        effects_robot: req.body.effects_robot,
                         speakingRate: req.body.speed,
                         volume: req.body.volume,
                         voiceTypeId: req.body.voice_type
@@ -71,6 +73,8 @@ page_path_set_index_ejs.pages = [
                         {
                             text: req.body.text,
                             reverse_play: req.body.reverse_play,
+                            effects_yamabiko: req.body.effects_yamabiko,
+                            effects_robot: req.body.effects_robot,
                             pitch: req.body.pitch,
                             speakingRate: req.body.speed,
                             volume: req.body.volume,
