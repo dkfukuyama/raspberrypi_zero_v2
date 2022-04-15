@@ -1,17 +1,26 @@
 <form action="<%- data.page.path %>" method="POST">
-    <textarea name="text" cols="60" rows="5"><%- prevPostData.text %></textarea>
+    <div class="container">
+    <div class="mb-3">
+        <textarea name="text" class="form-control form-control-lg" rows="5" placeholder="しゃべらせたいないようをにゅうりょくしてね" aria-label=".form-control-lg example"><%- prevPostData.text %></textarea>
+    </div>
+    </div>
     <BR>
 
     <% let cx = prevPostData?.voice_type ?? 0 %>
     <% let special = page?.specialParams ?? 0 %>
-    <P>こえのしゅるい<BR>
+    <div class="container bg-light border border-primary">
+        こえのしゅるい
         <% const vt = special.voiceTypes %>
         <% const vlen = vt.length %>
         <% for(let i=0; i<vlen; i++){ %>
-            <input type="radio" name="voice_type" id="rb1" value="<%= i %>" <%- cx==i?'checked':'' %>><%- vt[i].show_name %></input>　　
-            <%- i%4==3 ? '<BR>' : '' %>
+            <%- i%4==0 ? '<div class="row">' : '' %>
+            <div class="col">
+            <input type="radio" name="voice_type" id="rb1" value="<%= i %>" <%- cx==i?'checked':'' %>><%- vt[i].show_name %></input>
+            </div>
+            <%- i%4==3 ? '</div>' : '' %>
         <%} %>
-    </p>
+        </div>
+    </div>
     <% let sp = prevPostData?.speed ?? 1 %>
     <% let pt = prevPostData?.pitch ?? 0 %>
     <% let vol = prevPostData?.volume ?? 30 %>
@@ -30,10 +39,20 @@
     </P>
     
     <P><input type="checkbox" name="reverse_play" value="true" <%- prevPostData?.reverse_play ? 'checked' : '' %>>はんたいことば</P>
-    <BR>
-    <P>このしたはじっけんちゅうです。まだうまくうごかないかもしれませんよ</P>
-    <P><input type="checkbox" name="effects_robot" value="true" <%- prevPostData?.effects_robot ? 'checked' : '' %>>ロボット</P>
-    <P><input type="checkbox" name="effects_yamabiko" value="true" <%- prevPostData?.effects_yamabiko ? 'checked' : '' %>>やまびこ</P>
+    <div class="container bg-light border border-primary">
+        とくしゅこうか
+        <div class="row">
+            <div class="col">
+                <input type="radio" name="rb_effects1" value="" <%- !prevPostData?.rb_effects1 ? 'checked' : '' %>>なし
+            </div>
+            <div class="col">
+                <input type="radio" name="rb_effects1" value="robot" <%- prevPostData?.rb_effects1 == 'robot' ? 'checked' : '' %>>ロボット
+            </div>
+            <div class="col">
+                <input type="radio" name="rb_effects1" value="yamabiko" <%- prevPostData?.rb_effects1 == 'yamabiko' ? 'checked' : '' %>>やまびこ
+            </div>
+        </div>
+    </div>
 
     <% let g_addr = common.ghomeSpeakers %>
     <% if(g_addr.length == 0){ %>

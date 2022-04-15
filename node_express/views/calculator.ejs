@@ -1,5 +1,60 @@
 <form action="<%- data.page.path %>" method="POST">
 
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" id="n1">    
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="n2">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="n3">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <div class="container">
+                    <div class="row">
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">7</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">8</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">9</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">+</button></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">4</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">5</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">6</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">-</button></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">1</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">2</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">3</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">×</button></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">0</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">.</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">=</button></div>
+                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">÷</button></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+
     <% let g_addr = common.ghomeSpeakers %>
     <% if(g_addr.length == 0){ %>
         <%- '<P>ねっとわーくのなかに、ぐーぐるさんがみつかりません</p>' %>
@@ -8,5 +63,4 @@
     <BR/>
     <BR/>
     <% }) %>
-    <button class="btn btn-secondary" type="submit" value="otosan" name="submit">おとうさんにおくる</button>
 </form>
