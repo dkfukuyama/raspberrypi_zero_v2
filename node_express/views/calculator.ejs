@@ -68,6 +68,7 @@
                 case '÷':
                     let element = document.getElementById('n2');
                     element.value = p;
+                    selectText(3);
                     break;
                 case 0:
                 case 1:
@@ -97,6 +98,8 @@
                 not_selectedItem.className = "form-control-lg";
             return;
         }
-
+        window.onload = function() {
+            selectText(1);
+        }
     </script>
 </form>
