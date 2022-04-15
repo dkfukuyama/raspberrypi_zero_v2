@@ -13,6 +13,8 @@ const ghome = require('./gHomeCnt');
 const ut = require('./utils');
 const { resolve } = require("path");
 
+const calc = require('./calculator')
+
 app.use(favicon(path.join(__dirname, '/views/ico/favicon.png')));
 
 app.use(bodyParser.urlencoded({
@@ -95,17 +97,39 @@ page_path_set_index_ejs.pages = [
         view_page: './calculator.ejs',
         level: 0,
         postfunc: async (req, res)=>{
-            return gtts.speechOnGoogleHome(
-                speaker_name, 
-                {
-                    text: req.body.text,
-                    reverse_play: req.body.reverse_play,
-                    pitch : req.body.pitch,
-                    speakingRate: req.body.speed,
-                    volume: req.body.volume,
-                    voiceTypeId : req.body.voice_type
-                }
-            );
+            console.log(`req.body.submit = ${req.body.submit}`);
+
+            req.body.text = calc.make_calculation_text(req.body);
+
+            let speaker_name = '';
+            if(req.body.submit.startsWith('google|')){
+                console.log('グーグルスピーカーモード');
+                speaker_name = req.body.submit.replace('google|','');
+                console.log(speaker_name);
+                return gtts.speechOnGoogleHome(
+                    speaker_name,
+                    {
+                        text: req.body.text,
+                        volume: req.body.volume,
+                        voiceTypeId: req.body.voice_type
+                    }
+                );
+            }else switch (req.body.submit) {
+                case 'otosan':
+                    console.log('おとうさん送信モード');
+                    return gtts.speechOnGoogleHome(
+                        '',
+                        {
+                            text: req.body.text,
+                            volume: req.body.volume,
+                            voiceTypeId: req.body.voice_type
+                        }
+                    ).then((params) => {
+                        let mailer = new mail.NodeMailer();
+                        mailer.SendTextAndAttachment('ぐーぐるだよ', req.body.text, params.outfilePath);
+                    }).catch(er=>console.log(er)).then((d)=>resolve(d));
+            }
+            return;
         },
         specialParams:{
             voiceTypes: require('./google_tts').voiceType,

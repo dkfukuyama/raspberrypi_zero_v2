@@ -3,56 +3,48 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <input type="text" class="form-control" id="n1">    
+                <input type="text" class="form-control-lg" name="n1" id="n1" style="text-align: right; font-size: xx-large" onclick="selectText(1)"></input>    
             </div>
             <div class="col">
-                <input type="text" class="form-control" id="n2">
+                <input type="text" class="form-control-lg border-0" name="n2" id="n2" style="text-align: center; font-size: xx-large" ></input>
             </div>
             <div class="col">
-                <input type="text" class="form-control" id="n3">
+                <input type="text" class="form-control-lg" name="n3" id="n3" style="text-align: right; font-size: xx-large" onclick="selectText(3)"></input>
             </div>
         </div>
     </div>
-
+    <BR/>
+    <BR/>
+    <BR/>
     <div class="container">
-        <div class="row">
-            <div class="col">
-            </div>
-            <div class="col">
-                <div class="container">
-                    <div class="row">
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">7</button></div>
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">8</button></div>
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">9</button></div>
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">+</button></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">4</button></div>
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">5</button></div>
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">6</button></div>
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">-</button></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">1</button></div>
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">2</button></div>
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">3</button></div>
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">×</button></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">0</button></div>
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">.</button></div>
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">=</button></div>
-                        <div class="col"><button type="button" class="btn btn-outline-primary btn-lg">÷</button></div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col">
-            </div>
-        </div>
+        <table class="table">
+            <tbody>
+                <tr>
+                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(7)">7</button></td>
+                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(8)">8</button></td>
+                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(9)">9</button></td>
+                <td><button type="button" class="btn btn-secondary btn-lg" style="width:100%" onclick="buttonClick('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(4)">4</button></td>
+                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(5)">5</button></td>
+                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(6)">6</button></td>
+                <td><button type="button" class="btn btn-secondary btn-lg" style="width:100%" onclick="buttonClick('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(1)">1</button></td>
+                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(2)">2</button></td>
+                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(3)">3</button></td>
+                <td><button type="button" class="btn btn-secondary btn-lg" style="width:100%" onclick="buttonClick('×')">×</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(0)">0</button></td>
+                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick('.')">.</button></td>
+                <td><button type="button" class="btn btn-dark btn-lg" style="width:100%" onclick="buttonClick('=')">=</button></td>
+                <td><button type="button" class="btn btn-secondary btn-lg" style="width:100%" onclick="buttonClick('÷')">÷</button></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 
     <% let g_addr = common.ghomeSpeakers %>
@@ -63,4 +55,48 @@
     <BR/>
     <BR/>
     <% }) %>
+    <button class="btn btn-secondary" type="submit" value="otosan" name="submit">こたえをおとうさんにおくる</button>
+
+    <script>
+        let selectedItem;
+        let not_selectedItem;
+        function buttonClick(p){
+            switch(p){
+                case '+':
+                case '-':
+                case '×':
+                case '÷':
+                    let element = document.getElementById('n2');
+                    element.value = p;
+                    break;
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                    selectedItem.value = parseFloat(selectedItem.value + p);
+                    break;
+            }
+        }
+
+        function selectText(p){
+            if(p==1){
+                selectedItem = document.getElementById('n1');
+                not_selectedItem = document.getElementById('n3');
+            }
+            else if(p==3){
+                not_selectedItem = document.getElementById('n1');
+                selectedItem = document.getElementById('n3');
+            }else return;
+                selectedItem.className = "form-control-lg border-3 border-dark";
+                not_selectedItem.className = "form-control-lg";
+            return;
+        }
+
+    </script>
 </form>
