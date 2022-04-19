@@ -1,29 +1,30 @@
 <form action="<%- data.page.path %>" method="POST">
 
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <input type="text" class="form-control-lg" name="n1" id="n1" style="text-align: right; font-size: xx-large" onclick="selectText(1)"></input>    
-            </div>
-            <div class="col">
-                <input type="text" class="form-control-lg border-0" name="n2" id="n2" style="text-align: center; font-size: xx-large" ></input>
-            </div>
-            <div class="col">
-                <input type="text" class="form-control-lg" name="n3" id="n3" style="text-align: right; font-size: xx-large" onclick="selectText(3)"></input>
-            </div>
-        </div>
-    </div>
-    <BR/>
-    <BR/>
-    <BR/>
-    <div class="container">
-        <table class="table">
+        <table class="table table-borderless">
             <tbody>
                 <tr>
-                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(7)">7</button></td>
-                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(8)">8</button></td>
-                <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(9)">9</button></td>
-                <td><button type="button" class="btn btn-secondary btn-lg" style="width:100%" onclick="buttonClick('+')">+</button></td>
+                    <td>
+                        <input type="text" class="form-control" name="n1" id="n1" style="text-align: right; font-size: xx-large" onclick="selectText(1)"></input>    
+                    </td>
+                    <td>
+                        <input type="text" class="form-control border-0" name="n2" id="n2" style="text-align: center; font-size: xx-large" ></input>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" name="n3" id="n3" style="text-align: right; font-size: xx-large" onclick="selectText(3)"></input>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container mt-5">
+        <table class="table table-borderless">
+            <tbody>
+                <tr>
+                <td style="width:25%"><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(7)">7</button></td>
+                <td style="width:25%"><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(8)">8</button></td>
+                <td style="width:25%"><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(9)">9</button></td>
+                <td style="width:25%"><button type="button" class="btn btn-secondary btn-lg" style="width:100%" onclick="buttonClick('+')">+</button></td>
             </tr>
             <tr>
                 <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(4)">4</button></td>
@@ -40,22 +41,26 @@
             <tr>
                 <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick(0)">0</button></td>
                 <td><button type="button" class="btn btn-outline-primary btn-lg" style="width:100%" onclick="buttonClick('.')">.</button></td>
-                <td><button type="button" class="btn btn-dark btn-lg" style="width:100%" onclick="buttonClick('=')">=</button></td>
+                <td><button type="button" class="btn btn-dark btn-lg" style="width:100%" onclick="buttonClick('%')">÷あまり</button></td>
                 <td><button type="button" class="btn btn-secondary btn-lg" style="width:100%" onclick="buttonClick('÷')">÷</button></td>
             </tr>
             </tbody>
         </table>
     </div>
 
-    <% let g_addr = common.ghomeSpeakers %>
-    <% if(g_addr.length == 0){ %>
-        <%- '<P>ねっとわーくのなかに、ぐーぐるさんがみつかりません</p>' %>
-    <% } else g_addr.forEach(e=> {%>
-    <button class="btn btn-primary" type="submit" value="google|<%- e.speakerName %>" name="submit">こたえをぐーぐるさん(<%- e.speakerName %>)がしゃべる</button>
-    <BR/>
-    <BR/>
-    <% }) %>
-    <button class="btn btn-secondary" type="submit" value="otosan" name="submit">こたえをおとうさんにおくる</button>
+    <div class="container">
+        <div class="row mt-5">
+            <% let g_addr = common.ghomeSpeakers %>
+            <% if(g_addr.length == 0){ %>
+                <%- '<P>ねっとわーくのなかに、ぐーぐるさんがみつかりません</p>' %>
+            <% } else g_addr.forEach(e=> {%>
+            <button class="btn btn-primary" type="submit" value="google|<%- e.speakerName %>" name="submit">ぐーぐるさん(<%- e.speakerName %>)がしゃべる</button>
+            <% }) %>
+        </div>
+        <div class="row mt-2">
+            <button class="btn btn-secondary" type="submit" value="otosan" name="submit">おとうさんにおくる</button>
+        </div>
+    </div>
 
     <script>
         let selectedItem;
@@ -66,6 +71,7 @@
                 case '-':
                 case '×':
                 case '÷':
+                case '%':
                     let element = document.getElementById('n2');
                     element.value = p;
                     selectText(3);
@@ -81,6 +87,14 @@
                 case 8:
                 case 9:
                     selectedItem.value = parseFloat(selectedItem.value + p);
+                    if(isNaN(selectedItem.value) || !isFinite(selectedItem.value)){
+                        selectedItem.value = 0;
+                    }
+                    let len = selectedItem.value.length;
+                    if(len > 5){
+                        selectedItem.value = selectedItem.value.substr(len - 5);
+                    }
+
                     break;
             }
         }

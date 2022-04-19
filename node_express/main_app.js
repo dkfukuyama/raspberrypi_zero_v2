@@ -14,6 +14,8 @@ const ut = require('./utils');
 const { resolve } = require("path");
 
 const calc = require('./calculator')
+const slk = require('./slacksend');
+
 
 app.use(favicon(path.join(__dirname, '/views/ico/favicon.png')));
 
@@ -291,6 +293,15 @@ async function main() {
 
     app.listen(httpServerPort, () => console.log(`http server port No. ${httpServerPort}`));
     ghome.startSeekGoogleLoop();
+
+    slk.slacksend('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%');
+    slk.slacksend(process.env.COMPUTERNAME);
+    slk.slacksend('system start');
+    require('date-utils');
+    const date = new Date();
+    const currentTime = date.toFormat('YYYY-MM-DD HH:24MI:SS');
+    slk.slacksend(currentTime);
+
     for (let i = 0; ; await ut.delay_ms(1000)) {
         if(ghome.getGoogleHomeAddresses().length){
             if(i == 0) console.log(ghome.getGoogleHomeAddresses());

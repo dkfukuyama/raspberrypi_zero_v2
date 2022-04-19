@@ -21,6 +21,8 @@
         <%} %>
         </div>
     </div>
+
+    <div class="container bg-light border border-primary mt-2">
     <% let sp = prevPostData?.speed ?? 1 %>
     <% let pt = prevPostData?.pitch ?? 0 %>
     <% let vol = prevPostData?.volume ?? 30 %>
@@ -37,9 +39,9 @@
         <input id="volume_slider" type="range" name="volume" min="0" max="100" step="5" 
             value="<%- vol %>"><div id="volume_value"><%- vol %></div>
     </P>
-    
     <P><input type="checkbox" name="reverse_play" value="true" <%- prevPostData?.reverse_play ? 'checked' : '' %>>はんたいことば</P>
-    <div class="container bg-light border border-primary">
+    </div>
+    <div class="container bg-light border border-primary mt-2">
         とくしゅこうか
         <div class="row">
             <div class="col">
@@ -54,15 +56,19 @@
         </div>
     </div>
 
-    <% let g_addr = common.ghomeSpeakers %>
-    <% if(g_addr.length == 0){ %>
-        <%- '<P>ねっとわーくのなかに、ぐーぐるさんがみつかりません</p>' %>
-    <% } else g_addr.forEach(e=> {%>
-    <button class="btn btn-primary" type="submit" value="google|<%- e.speakerName %>" name="submit">ぐーぐるさん(<%- e.speakerName %>)がしゃべる</button>
-    <BR/>
-    <BR/>
-    <% }) %>
-    <button class="btn btn-secondary" type="submit" value="otosan" name="submit">おとうさんにおくる</button>
+    <div class="container">
+        <div class="row mt-5">
+            <% let g_addr = common.ghomeSpeakers %>
+            <% if(g_addr.length == 0){ %>
+                <%- '<P>ねっとわーくのなかに、ぐーぐるさんがみつかりません</p>' %>
+            <% } else g_addr.forEach(e=> {%>
+            <button class="btn btn-primary" type="submit" value="google|<%- e.speakerName %>" name="submit">ぐーぐるさん(<%- e.speakerName %>)がしゃべる</button>
+            <% }) %>
+        </div>
+        <div class="row mt-2">
+            <button class="btn btn-secondary" type="submit" value="otosan" name="submit">おとうさんにおくる</button>
+        </div>
+    </div>
 </form>
 
 
