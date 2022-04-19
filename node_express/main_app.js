@@ -16,6 +16,9 @@ const { resolve } = require("path");
 const calc = require('./calculator')
 const slk = require('./slacksend');
 
+const sch = require('./scheduler');
+
+require('date-utils');
 
 app.use(favicon(path.join(__dirname, '/views/ico/favicon.png')));
 
@@ -181,6 +184,8 @@ page_path_set_index_ejs.pages = [
             {
                 console.log('COMMAND MODE');
                 console.log(req.body.mode);
+                slk.slacksend('COMMAND MODE');
+                slk.slacksend(req.body.mode);
                 switch(req.body.mode){
                 case 'cal_today' :
                     return gtts.speechOnGoogleHomeCal(ghome.getGoogleHomeAddresses()[0].speakerName, {});
@@ -297,10 +302,11 @@ async function main() {
     slk.slacksend('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%');
     slk.slacksend(process.env.COMPUTERNAME);
     slk.slacksend('system start');
-    require('date-utils');
     const date = new Date();
-    const currentTime = date.toFormat('YYYY-MM-DD HH:24MI:SS');
+    const currentTime = date.toFormat('YYYY-MM-DD HH24:MI:SS');
     slk.slacksend(currentTime);
+
+    sch.start();
 
     for (let i = 0; ; await ut.delay_ms(1000)) {
         if(ghome.getGoogleHomeAddresses().length){
