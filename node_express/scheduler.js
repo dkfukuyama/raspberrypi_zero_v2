@@ -33,7 +33,7 @@ async function start(){
     let currentTime_f;
     let prevTime_f;
 
-    for(;;await ut.delay_ms(10000)){
+    for(;;await ut.delay_ms(48123)){
         prevTime = currentTime;
         currentTime = new Date();
         prevTime_f = currentTime_f;
