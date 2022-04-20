@@ -1,5 +1,13 @@
+<% let g_addr = common.ghomeSpeakers %>
+<P>みつかったぐーぐるすぴーかー</P>
+<% if(g_addr.length == 0){ %>
+	<%- '<P>ないよ。</p>' %>
+<% } else g_addr.forEach(e=> {%>
+<%- `<li>${e.address} / ${e.friendlyName} / ${e.speakerName}</li>` %>
+<% }) %>
 <P>きまったじこくによていをよみあげる</P>
 <button id="g_cal_button">いま、よていをよみあげる</button>
+
 <P>きまったじこくにおんがくをかける</P>
 <P>おとのおおきさ</P>
 <button id="clean_wav">たまったおんせいファイルをしょうきょする</button>

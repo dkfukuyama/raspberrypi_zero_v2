@@ -274,26 +274,3 @@ async function main(){
     
 }
 */
-
-/*
-const logDbName = './log_data.db';
-function main(){
-    var input = '';
-    process.stdin.resume();
-    process.stdin.setEncoding('utf8');
-    process.stdin.on('data', function(chunk) {
-        input += chunk;
-        AddLogDB(logDbName, 'test01', input);
-        //.catch(err=>console.log(err));
-        process.stdout.write(input);
-        input = '';
-    });
-    process.stdin.on('end', function() {
-        console.log('>>>>>> LOG PIPE END');
-    });
-}
-
-//
-
-main();
-*/

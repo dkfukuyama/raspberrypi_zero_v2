@@ -8,9 +8,17 @@ const exec = require('child_process').exec;
 const bodyParser = require('body-parser');
 const { google } = require("@google-cloud/text-to-speech/build/protos/protos");
 
+const mail = require('./send_mail');
 const ghome = require('./gHomeCnt');
 const ut = require('./utils');
+const { resolve } = require("path");
 
+const calc = require('./calculator')
+const slk = require('./slacksend');
+
+const sch = require('./scheduler');
+
+require('date-utils');
 
 app.use(favicon(path.join(__dirname, '/views/ico/favicon.png')));
 
@@ -21,7 +29,6 @@ app.use(express.json());
 
 // テンプレートエンジンの指定
 app.set("view engine", "ejs");
-
 
 const speaker_name = '2Fリビング';
 let volumeLevel = 30;
@@ -45,23 +52,97 @@ page_path_set_index_ejs.pages = [
         title: 'しゃべらせたいとき',
         view_page: './speak.ejs',
         level: 0,
+        postfunc: async (req, res) => {
+            console.log(`req.body.submit = ${req.body.submit}`);
+            let speaker_name = '';
+            if(req.body.submit.startsWith('google|')){
+                console.log('グーグルスピーカーモード');
+                speaker_name = req.body.submit.replace('google|','');
+                console.log(speaker_name);
+                return gtts.speechOnGoogleHome(
+                    speaker_name,
+                    {
+                        text: req.body.text,
+                        reverse_play: req.body.reverse_play,
+                        pitch: req.body.pitch,
+                        rb_effects1 : req.body.rb_effects1,
+                        speakingRate: req.body.speed,
+                        volume: req.body.volume,
+                        voiceTypeId: req.body.voice_type
+                    }
+                );
+            }else switch (req.body.submit) {
+                case 'otosan':
+                    console.log('おとうさん送信モード');
+                    return gtts.speechOnGoogleHome(
+                        '',
+                        {
+                            text: req.body.text,
+                            reverse_play: req.body.reverse_play,
+                            rb_effects1 : req.body.rb_effects1,
+                            pitch: req.body.pitch,
+                            speakingRate: req.body.speed,
+                            volume: req.body.volume,
+                            voiceTypeId: req.body.voice_type
+                        }
+                    ).then((params) => {
+                        let mailer = new mail.NodeMailer();
+                        mailer.SendTextAndAttachment('ぐーぐるだよ', req.body.text, params.outfilePath);
+                    }).catch(er=>console.log(er)).then((d)=>resolve(d));
+            }
+            return;
+        },
+        specialParams : {
+            voiceTypes : require('./google_tts').voiceType,
+        }
+    },
+    {
+        path: '/calculator',
+        title: 'でんたく',
+        view_page: './calculator.ejs',
+        level: 0,
         postfunc: async (req, res)=>{
-            return gtts.speechOnGoogleHome(
-                speaker_name, 
-                {
-                    text: req.body.text,
-                    reverse_play: req.body.reverse_play,
-                    pitch : req.body.pitch,
-                    speakingRate: req.body.speed,
-                    volume: req.body.volume,
-                    voiceTypeId : req.body.voice_type
-                }
-            );
+            console.log(`req.body.submit = ${req.body.submit}`);
+
+            req.body.text = calc.make_calculation_text(req.body);
+
+            let speaker_name = '';
+            if(req.body.submit.startsWith('google|')){
+                console.log('グーグルスピーカーモード');
+                speaker_name = req.body.submit.replace('google|','');
+                console.log(speaker_name);
+                return gtts.speechOnGoogleHome(
+                    speaker_name,
+                    {
+                        text: req.body.text,
+                        volume: req.body.volume,
+                        voiceTypeId: req.body.voice_type
+                    }
+                );
+            }else switch (req.body.submit) {
+                case 'otosan':
+                    console.log('おとうさん送信モード');
+                    return gtts.speechOnGoogleHome(
+                        '',
+                        {
+                            text: req.body.text,
+                            volume: req.body.volume,
+                            voiceTypeId: req.body.voice_type
+                        }
+                    ).then((params) => {
+                        let mailer = new mail.NodeMailer();
+                        mailer.SendTextAndAttachment('ぐーぐるだよ', req.body.text, params.outfilePath);
+                    }).catch(er=>console.log(er)).then((d)=>resolve(d));
+            }
+            return;
         },
         specialParams:{
-            voiceTypes : require('./google_tts').voiceType,
+            voiceTypes: require('./google_tts').voiceType,
         },
     },
+
+
+
     {
         path: '/music',
         title: 'おんがくをかける',
@@ -92,7 +173,7 @@ page_path_set_index_ejs.pages = [
         path: '/config',
         title: 'かんり、せってい',
         view_page: './config.ejs',
-        level: 0
+        level: 0,
     },
     {
         path: '/command',
@@ -103,9 +184,11 @@ page_path_set_index_ejs.pages = [
             {
                 console.log('COMMAND MODE');
                 console.log(req.body.mode);
+                slk.slacksend('COMMAND MODE');
+                slk.slacksend(req.body.mode);
                 switch(req.body.mode){
                 case 'cal_today' :
-                    return gtts.speechOnGoogleHomeCal(speaker_name, {});
+                    return gtts.speechOnGoogleHomeCal(ghome.getGoogleHomeAddresses()[0].speakerName, {});
                 case 'clean_wav':
                     return new Promise((resolve, _) => resolve(require('./clean').clean_wav(100)));
                 case 'system_command' :
@@ -157,7 +240,13 @@ page_path_set_index_ejs.pages.forEach(p =>{
                 items: null
             };
             // レンダリングを行う
-            res.render("./index.ejs", {data: data, prevPostData: req.body, pages: page_path_set_index_ejs.pages});
+            update_common_paramters();
+            res.render("./index.ejs", {
+                data: data, 
+                prevPostData: req.body, 
+                pages: page_path_set_index_ejs.pages,
+                common: page_path_set_index_ejs.common
+            });
 
         }catch(er){
             console.log('CATCH ERROR');
@@ -209,6 +298,16 @@ async function main() {
 
     app.listen(httpServerPort, () => console.log(`http server port No. ${httpServerPort}`));
     ghome.startSeekGoogleLoop();
+
+    slk.slacksend('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%');
+    slk.slacksend(process.env.COMPUTERNAME);
+    slk.slacksend('system start');
+    const date = new Date();
+    const currentTime = date.toFormat('YYYY-MM-DD HH24:MI:SS');
+    slk.slacksend(currentTime);
+
+    sch.start();
+
     for (let i = 0; ; await ut.delay_ms(1000)) {
         if(ghome.getGoogleHomeAddresses().length){
             if(i == 0) console.log(ghome.getGoogleHomeAddresses());
