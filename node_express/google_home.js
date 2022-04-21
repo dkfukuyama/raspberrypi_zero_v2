@@ -35,36 +35,33 @@ async function speechOnGoogleHome(fname, params){
             await gtts.getTtsAudioData(params).catch((err)=>reject(err));
 
             console.log(`params.rb_effects1 = ${params.rb_effects1}`);
-            switch(params.rb_effects1){
-            case 'hankyo':
-                {
-                    const outpath2 = params.outfilePath.replace(".wav", "_sox.wav");
-                    path_togo = path_togo.replace(".wav", "_sox.wav");
-                    const commandLine = `sox ${params.outfilePath} ${outpath2} reverb`;
-                    execSync(commandLine);
-                    console.log(commandLine);
-                }
-               break;
-            case 'robot':
-                {
-                    const outpath2 = params.outfilePath.replace(".wav", "_sox.wav");
-                    path_togo = path_togo.replace(".wav", "_sox.wav");
-                    const commandLine = `sox ${params.outfilePath} ${outpath2} chorus 1 1 100.0 1 5 5.0 -s`;
-                    execSync(commandLine);
-                    console.log(commandLine);
-                }
-                break;
-            case 'yamabiko':
-                {
-                    const outpath2 = params.outfilePath.replace(".wav", "_sox.wav");
-                    path_togo = path_togo.replace(".wav", "_sox.wav");
-                    const commandLine = `sox ${params.outfilePath} ${outpath2} echos 0.8 0.7 700.0 0.25 900.0 0.3`;
-                    execSync(commandLine);
-                    console.log(commandLine);
-                }
-                break;
-            }
 
+            rb_effects1_array = [
+                {
+                    key: 'hankyo',
+                    command: 'reverb 50 50 100'
+                },
+                {
+                    key: 'robot',
+                    command: 'chorus 1 1 100.0 1 5 5.0 -s'
+                },
+                {
+                    key: 'yamabiko',
+                    command: 'echos 0.8 0.7 700.0 0.25 900.0 0.3'
+                }
+            ];
+
+            if (params.rb_effects1) {
+                rb_effects1_array.forEach(e => {
+                    if (e.key == params.rb_effects1) {
+                        const outpath2 = params.outfilePath.replace(".wav", "_sox.wav");
+                        path_togo = path_togo.replace(".wav", "_sox.wav");
+                        const commandLine = `sox ${params.outfilePath} ${outpath2} ${e.command}`;
+                        execSync(commandLine);
+                        console.log(commandLine);
+                    }
+                });
+            }
 
             const fpath = vars.globalVars().httpDir + "/" + path_togo;
 
