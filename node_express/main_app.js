@@ -306,7 +306,7 @@ async function main() {
     const currentTime = date.toFormat('YYYY-MM-DD HH24:MI:SS');
     slk.slacksend(currentTime);
 
-    sch.start();
+    sch.setNodeCrontab();
 
     for (let i = 0; ; await ut.delay_ms(1000)) {
         if(ghome.getGoogleHomeAddresses().length){
