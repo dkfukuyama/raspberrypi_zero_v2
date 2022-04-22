@@ -3,8 +3,8 @@ const gh = require('./google_home');
 require('date-utils');
 
 async function test_main() {
-    let dts = new Date().add({ "minutes": 30 });
-    let dte = new Date().add({ "minutes": 60 });
+    let dts = Date.Today;
+    let dte = Date.Tomorrow;
     console.log(dts);
     console.log(dte);
 

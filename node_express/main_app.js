@@ -295,7 +295,6 @@ app.use((err, req, res, next) => {
 
 let httpServerPort = vars.globalVars().serverPort;
 async function main() {
-
     app.listen(httpServerPort, () => console.log(`http server port No. ${httpServerPort}`));
     ghome.startSeekGoogleLoop();
 

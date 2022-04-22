@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const vars = require('./variables');
+const slk = require('./slacksend');
+
+
 function clean_wav(leftnum) {
 
     let dir = vars.globalVars().saveDir;
@@ -39,6 +42,9 @@ function clean_wav(leftnum) {
             }
         });
     });
+
+    slk.slacksend(`CLEAN WAV OK`);
+
     return "";
 }
 
