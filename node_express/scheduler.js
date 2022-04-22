@@ -29,18 +29,28 @@ function isBetween(target, dateStart, dateEnd){
     return (ds <= dt && dt < de);
 }
 
-function setNodeCrontab(){
-    // WatchCalender
-    cron.schedule('10 */5 * * * *', async () => {
-        let dts = new Date().add({ "minutes": 30 });
-        let dte = new Date().add({ "minutes": 35 });
-        console.log(dts);
-        console.log(dte);
-    
+function setNodeCrontab() {
+    // Tomorrow Schedule
+    cron.schedule('0 0 20 * * *', async () => {
+        let dts = Date.Today;
+        let dte = Date.Tomorrow;
         let g = await gh.getCalJson(dts, dte);
-        
+        getCalJsonReturnToText(g, "あした");
         console.log(g);
     });
+
+    
+    // WatchCalender
+    //cron.schedule('10 */5 * * * *', async () => {
+    //    let dts = new Date().add({ "minutes": 30 });
+    //    let dte = new Date().add({ "minutes": 35 });
+    //    console.log(dts);
+    //    console.log(dte);
+    //
+    //    let g = await gh.getCalJson(dts, dte);
+    //
+    //    console.log(g);
+    //});
 
     cron.schedule('18 12 5 * * *', () => {
         const command = 'curl -d \'mode=clean_wav\' http://localhost/command';
