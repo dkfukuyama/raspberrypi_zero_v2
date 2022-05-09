@@ -6,7 +6,7 @@ const favicon = require('express-favicon');
 const vars = require('./variables');
 const exec = require('child_process').exec;
 const bodyParser = require('body-parser');
-const { google } = require("@google-cloud/text-to-speech/build/protos/protos");
+//const { google } = require("@google-cloud/text-to-speech/build/protos/protos");
 
 const mail = require('./send_mail');
 const ghome = require('./gHomeCnt');
@@ -294,6 +294,8 @@ app.use((err, req, res, next) => {
 
 
 let httpServerPort = vars.globalVars().serverPort;
+console.log(`process.env.SLACK_WEBHOOK=${process.env.SLACK_WEBHOOK}`);
+
 async function main() {
     app.listen(httpServerPort, () => console.log(`http server port No. ${httpServerPort}`));
     ghome.startSeekGoogleLoop();
@@ -301,6 +303,7 @@ async function main() {
     slk.slacksend('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%');
     slk.slacksend(process.env.COMPUTERNAME);
     slk.slacksend('system start');
+
     const date = new Date();
     const currentTime = date.toFormat('YYYY-MM-DD HH24:MI:SS');
     slk.slacksend(currentTime);

@@ -93,6 +93,7 @@ function setNodeCrontab() {
                 slk.slacksend(stdout);
             }
         });
+    });
 }
 
 async function start(){
