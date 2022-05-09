@@ -141,13 +141,14 @@ page_path_set_index_ejs.pages = [
         },
     },
 
-
-
     {
         path: '/music',
         title: 'おんがくをかける',
         view_page: './music.ejs',
-        level: 0
+        level: 0,
+        specialParams: {
+            musicList: require('./get_musicList').getAsync(),
+        },
     },
     {
         path: '',
