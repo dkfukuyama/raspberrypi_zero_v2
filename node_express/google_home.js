@@ -112,53 +112,53 @@ async function getCalDayBetweenJson(date1, date2) {
     );
 }
 
-function getCalJsonReturnToText(g) {
+function getCalJsonReturnToText(g, dayx) {
     const textparams = [
         {
-            headerAll: "今日は[date]。予定のお知らせだよーーん。。",
+            headerAll: "[day]は[date]。予定のお知らせだよーーん。。",
             headerSchedule: "[i]番目の予定は[shName]だよ。",
             startTime: "開始時刻は[startTime]だよ。",
-            noSchedule: "今日はカレンダーに登録されている予定はないよ。",
+            noSchedule: "[day]はカレンダーに登録されている予定はないよ。",
             location: "ばしょは[location]だよ"
         },
 
         {
-            headerAll: "今日は[date]。予定のお知らせだよーーん。だよーーん。だよーーん。",
+            headerAll: "[day]は[date]。予定のお知らせだよーーん。だよーーん。だよーーん。",
             headerSchedule: "[i]番目の予定は[shName]だよ～ん。だよ～ん。だよーーん。",
             startTime: "開始時刻は[startTime]だよ～ん。だよ～ん。だよ～ん。",
-            noSchedule: "今日はカレンダーに登録されている予定はないよ～ん。ないよ～ん。",
+            noSchedule: "[day]はカレンダーに登録されている予定はないよ～ん。ないよ～ん。",
             location: "ばしょは[location]だよ～ん。だよ～ん。だよ～ん。"
         },
 
         {
-            headerAll: "ほんじつは[date]。よていのおしらせでござるよ。",
+            headerAll: "[day]は[date]。よていのおしらせでござるよ。",
             headerSchedule: "[i]番目の予定は[shName]でござる。",
             startTime: "開始時刻は[startTime]でござる。",
-            noSchedule: "今日はカレンダーに登録されている予定はないでござる。",
+            noSchedule: "[day]はカレンダーに登録されている予定はないでござる。",
             location: "ばしょは[location]でござるよ。"
         },
 
         {
-            headerAll: "今日は[date]。予定のお知らせやで。",
+            headerAll: "[day]は[date]。予定のお知らせやで。",
             headerSchedule: "[i]番目の予定は[shName]やで。",
             startTime: "開始時刻は[startTime]やで。",
-            noSchedule: "今日はカレンダーに登録されている予定はあらへんわ。",
+            noSchedule: "[day]はカレンダーに登録されている予定はあらへんわ。",
             location: "ばしょは[location]やわ。"
         },
 
         {
-            headerAll: "今日は[date]でっせ～。予定のお知らせしまっせ～。",
+            headerAll: "[day]は[date]でっせ～。予定のお知らせしまっせ～。",
             headerSchedule: "[i]番目の予定は[shName]でっせ～。",
             startTime: "開始時刻は[startTime]でんねん。",
-            noSchedule: "今日はカレンダーに登録されている予定はおまへん！。",
+            noSchedule: "[day]はカレンダーに登録されている予定はおまへん！。",
             location: "ばしょは[location]でっせ～～。"
         },
 
         {
-            headerAll: "今日は[date]だぜ。今日の予定を教えてやるよ。",
+            headerAll: "[day]は[date]だぜ。今日の予定を教えてやるよ。",
             headerSchedule: "[i]番目の予定は[shName]だぜ。",
             startTime: "開始時刻は[startTime]だ。",
-            noSchedule: "今日はカレンダーに登録されている予定はないぜ。",
+            noSchedule: "[day]はカレンダーに登録されている予定はないぜ。",
             location: "ばしょは[location]だぞ。"
         },
     ];
@@ -168,9 +168,9 @@ function getCalJsonReturnToText(g) {
     
     let d = new Date();
     let wd = ["日", "月", "火", "水", "木", "金", "土"][d.getDay()] + "曜日";
-    let resultsText = textparams0.headerAll.replace("[date]", `、${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日　${wd}、`);
+    let resultsText = textparams0.headerAll.replace("[date]", `、${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日　${wd}、`).replace("[day]", `、${dayx}、`);
     if (g.events.length == 0) {
-        resultsText += textparams0.noSchedule;
+        resultsText += textparams0.noSchedule.replace("[day]", dayx);
     } else {
         g.events.forEach((e,i) => {
             resultsText += textparams0.headerSchedule.replace("[i]", i + 1).replace("[shName]", `、${e.Summary}、`);

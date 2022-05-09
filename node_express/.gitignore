@@ -1,5 +1,7 @@
+
 g_dlfile/*.wav
 *.txt
 .vs/
 
+*.ignore
 

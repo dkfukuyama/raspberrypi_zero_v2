@@ -295,7 +295,6 @@ app.use((err, req, res, next) => {
 
 let httpServerPort = vars.globalVars().serverPort;
 async function main() {
-
     app.listen(httpServerPort, () => console.log(`http server port No. ${httpServerPort}`));
     ghome.startSeekGoogleLoop();
 
@@ -306,7 +305,7 @@ async function main() {
     const currentTime = date.toFormat('YYYY-MM-DD HH24:MI:SS');
     slk.slacksend(currentTime);
 
-    sch.start();
+    sch.setNodeCrontab();
 
     for (let i = 0; ; await ut.delay_ms(1000)) {
         if(ghome.getGoogleHomeAddresses().length){
