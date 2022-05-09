@@ -70,7 +70,7 @@ function setNodeCrontab() {
 
         //{ "mode": "system_command", "command" : "sudo systemctl restart pi_server" }
 
-        const command = 'curl -d \'mode=clean_wav\' http://localhost/command';
+        const command = 'curl -d \'mode=clean_wav&short_return=1\' http://localhost/command';
         exec(command, async (err, stdout, stderr) => {
             slk.slacksend(command);
             if (err) {
@@ -83,7 +83,7 @@ function setNodeCrontab() {
     });
 
     cron.schedule('18 12 3 * * *', () => {
-        const command = 'curl -d \'mode=clean_wav\' http://localhost/command';
+        const command = 'curl -d \'mode=system_command&command=sudo systemctl restart pi_server\' http://localhost/command';
         exec(command, async (err, stdout, stderr) => {
             slk.slacksend(command);
             if (err) {

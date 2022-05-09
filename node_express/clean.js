@@ -39,13 +39,14 @@ function clean_wav(leftnum) {
                 console.log('DELETED');
             } catch (error) {
                 console.log("ERROR : " + JSON.stringify(error));
+                return { message: "ERROR : " + JSON.stringify(error) };
             }
         });
     });
 
     slk.slacksend(`CLEAN WAV OK`);
 
-    return "";
+    return { message: `CLEAN WAV OK`};
 }
 
 exports.clean_wav = clean_wav;

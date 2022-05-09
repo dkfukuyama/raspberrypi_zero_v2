@@ -225,8 +225,7 @@ page_path_set_index_ejs.pages.forEach(p =>{
             });
             console.log(pfunc_results);
             if (req.body.short_return) {
-                res.type(req.body.return_header);
-                res.send(pfunc_results);
+                res.json(pfunc_results);
                 res.end();
             }else{
                 next();

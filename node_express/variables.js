@@ -20,7 +20,7 @@ function globalVars(){
             switch(process.env.COMPUTERNAME){
                 case 'FUKU333_DESKTOP':
                 case 'FUKU333-PC':
-                    GL_VARS.saveDir0 = "\\\\LANDISK-201129\\disk1\\music";
+                    GL_VARS.saveDir0 = "\\\\LANDISK-201129\\disk1\\RaspberryPI_FILES\\Accessible_From_Raspberrypi";
                     break;
                 case 'KAIHATU-Z440A':
                     GL_VARS.saveDir0 = __dirname;
