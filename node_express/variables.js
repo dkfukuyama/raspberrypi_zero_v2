@@ -30,7 +30,6 @@ function globalVars(){
                 default:
                     GL_VARS.saveDir0 = "/mnt/nas_music";
                     break;
-    
             }
 
             console.log({
