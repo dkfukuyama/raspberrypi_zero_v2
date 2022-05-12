@@ -5,8 +5,25 @@ const gtts = require('./google_home')
 const favicon = require('express-favicon');
 const vars = require('./variables');
 const exec = require('child_process').exec;
+const { execSync } = require('child_process');
 const bodyParser = require('body-parser');
-//const { google } = require("@google-cloud/text-to-speech/build/protos/protos");
+
+
+let command = "";
+switch(process.env.COMPUTERNAME){
+    case 'PI_ZERO_01':
+    case 'PI_2B_01':
+        command = 'sudo npm install';
+        break;
+    default:
+        command = 'npm install';
+        break;
+}
+
+const stdout = execSync(command);
+console.log(stdout);
+let httpServerPort = vars.globalVars().serverPort;
+
 
 const mail = require('./send_mail');
 const ghome = require('./gHomeCnt');
@@ -291,11 +308,10 @@ app.use((err, req, res, next) => {
 })
 
 
-
-let httpServerPort = vars.globalVars().serverPort;
 console.log(`process.env.SLACK_WEBHOOK=${process.env.SLACK_WEBHOOK}`);
 
 async function main() {
+
     app.listen(httpServerPort, () => console.log(`http server port No. ${httpServerPort}`));
     ghome.startSeekGoogleLoop();
 
