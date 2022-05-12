@@ -3,33 +3,28 @@ const vars = require('./variables');
 const path = require('path')
 const fs = require('fs');
 
-async function getAsync(baseDir) {
+function get(baseDir) {
     let dir = vars.globalVars().saveDir0;
 
     if (baseDir) dir = path.join(dir, baseDir);
 
-    return new Promise((resolve, reject) => {
-        fs.readdir(dir, function (err, files) {
-            if (err) reject(err);
-            var fileList = [];
-            var dirList = [];
-            files.filter(
-                (file) => path.join(dir, file).isDirectory || /.*\.mp3$/.test(file) //çiÇËçûÇ›
-            ).forEach(function (file) {
-                if (path.join(dir, file).isDirectory) dirList.push(file);
-                else fileList.push(file);
-            });
+    let files = fs.readdirSync(dir);
 
-            resolve({ directories: dirList, files: fileList });
-        });
+    let fileList = [];
+    let dirList = [];
+    files.forEach(function (file) {
+        let temp_file = path.join(dir, file);
+        let stat = fs.statSync(temp_file);
+
+        if (stat.isDirectory() && ! new RegExp(vars.globalVars().voiceSubDir).test(file)) dirList.push(file);
+        else if(/.*\.(mp3|wav)$/.test(temp_file)) fileList.push(file);
     });
+    return {
+        fileList:fileList,
+        dirList:dirList
+    };
 }
 
-async function get(baseDir) {
-    await getAsync(baseDir);
-}
-
-exports.getAsync = getAsync;
 exports.get = get;
 
-console.log(get());
+//console.log(get());

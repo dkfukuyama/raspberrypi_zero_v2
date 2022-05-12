@@ -7,24 +7,6 @@ const vars = require('./variables');
 const exec = require('child_process').exec;
 const { execSync } = require('child_process');
 const bodyParser = require('body-parser');
-
-
-let command = "";
-switch(process.env.COMPUTERNAME){
-    case 'PI_ZERO_01':
-    case 'PI_2B_01':
-        command = 'sudo npm install';
-        break;
-    default:
-        command = 'npm install';
-        break;
-}
-
-const stdout = execSync(command);
-console.log(stdout);
-let httpServerPort = vars.globalVars().serverPort;
-
-
 const mail = require('./send_mail');
 const ghome = require('./gHomeCnt');
 const ut = require('./utils');
@@ -164,7 +146,7 @@ page_path_set_index_ejs.pages = [
         view_page: './music.ejs',
         level: 0,
         specialParams: {
-            musicList: require('./get_musicList').getAsync(),
+            musicList: require('./get_musicList').get(),
         },
     },
     {
@@ -312,6 +294,22 @@ app.use((err, req, res, next) => {
 console.log(`process.env.SLACK_WEBHOOK=${process.env.SLACK_WEBHOOK}`);
 
 async function main() {
+
+
+    let command = "";
+    switch(process.env.COMPUTERNAME){
+        case 'PI_ZERO_01':
+        case 'PI_2B_01':
+            command = 'sudo npm install';
+            break;
+        default:
+            command = 'npm install';
+            break;
+    }
+    
+    const stdout = execSync(command);
+    console.log(stdout);
+    let httpServerPort = vars.globalVars().serverPort;
 
     app.listen(httpServerPort, () => console.log(`http server port No. ${httpServerPort}`));
     ghome.startSeekGoogleLoop();

@@ -10,10 +10,10 @@ function globalVars(){
             console.log("LOAD VAL");
             GL_VARS.errorFlag = true;
             GL_VARS.serverPort = (process.env.SERVER_PORT ?? 80);
-            GL_VARS.voiceSubDir = (process.env.VOICE_SUBDIR ?? '/g_dlfile');
+            GL_VARS.voiceSubDir = (process.env.VOICE_SUBDIR ?? 'g_dlfile');
 
-            GL_VARS.httpDir0 = `http://${getLocalAddress().ipv4[0].address}:${GL_VARS.serverPort}`;
-            GL_VARS.httpDir = GL_VARS.httpDir0 + GL_VARS.voiceSubDir;
+            GL_VARS.httpDir0 = `${getLocalAddress().ipv4[0].address}:${GL_VARS.serverPort}`;
+            GL_VARS.httpDir = "http://" + path.posix.join(GL_VARS.httpDir0, GL_VARS.voiceSubDir);
 
             GL_VARS.g_calenderSummaryUrl = process.env.G_CAL_SUM;
 
@@ -23,7 +23,7 @@ function globalVars(){
                     GL_VARS.saveDir0 = "\\\\LANDISK-201129\\disk1\\RaspberryPI_FILES\\Accessible_From_Raspberrypi";
                     break;
                 case 'KAIHATU-Z440A':
-                    GL_VARS.saveDir0 = __dirname;
+                    GL_VARS.saveDir0 = path.join(__dirname, "test_mp3");
                     break;
                 case 'PI_ZERO_01':
                 case 'PI_2B_01':
@@ -79,6 +79,6 @@ function getLocalAddress() {
     return ifacesObj;
 };
 
-globalVars();
+//globalVars();
 
 exports.globalVars = globalVars;
