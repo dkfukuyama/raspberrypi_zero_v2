@@ -16,7 +16,7 @@ function get(baseDir) {
         let temp_file = path.join(dir, file);
         let stat = fs.statSync(temp_file);
 
-        if (stat.isDirectory() && ! new RegExp(vars.globalVars().voiceSubDir).test(file)) dirList.push(file);
+        if (stat.isDirectory()) dirList.push(file);
         else if(/.*\.(mp3|wav)$/.test(temp_file)) fileList.push(file);
     });
     return {
@@ -27,4 +27,3 @@ function get(baseDir) {
 
 exports.get = get;
 
-//console.log(get());

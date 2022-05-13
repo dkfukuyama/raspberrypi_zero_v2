@@ -146,7 +146,13 @@ page_path_set_index_ejs.pages = [
         view_page: './music.ejs',
         level: 0,
         specialParams: {
-            musicList: require('./get_musicList').get(),
+            musicList_get: require('./get_musicList').get,
+        },
+        postfunc: async (req, res)=>{
+            if(req.body.mode == 'playOnce'){
+                return ghome.play(req.body.gHomeName , req.body.filename, {volume : 80});
+            }
+            return Promise.reject({error : `FALSE play :: ${req.body.filename}`});
         },
     },
     {
@@ -223,6 +229,27 @@ page_path_set_index_ejs.pages.forEach(p =>{
                 er_occurred = true;
                 return JSON.stringify(er);
             });
+            console.log(" ----- POST pfunc_results ----- ");
+            console.log(pfunc_results);
+            if (req.body.short_return) {
+                res.json(pfunc_results);
+                res.end();
+            }else{
+                next();
+            }
+        });
+    }
+    if(p.getfunc){
+        app.get(p.path, async function(req, res, next) {
+            console.log('getfunc');
+            console.log(req.query);
+
+            let er_occurred = false;
+            pfunc_results = await p.getfunc(req, res).catch(er=>{
+                er_occurred = true;
+                return JSON.stringify(er);
+            });
+            console.log(" ----- GET pfunc_results ----- ");
             console.log(pfunc_results);
             if (req.body.short_return) {
                 res.json(pfunc_results);
@@ -242,7 +269,8 @@ page_path_set_index_ejs.pages.forEach(p =>{
             update_common_paramters();
             res.render("./index.ejs", {
                 data: data, 
-                prevPostData: req.body, 
+                prevPostData: req.body,
+                query: req.query,
                 pages: page_path_set_index_ejs.pages,
                 common: page_path_set_index_ejs.common
             });
