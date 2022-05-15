@@ -20,7 +20,7 @@ function getNowDateWithString(){
     return result;
 }
 
-async function speechOnGoogleHome(fname, params){
+async function speechOnGoogleHome(ghName, params){
     return new Promise(async (resolve, reject)=>{
         try{
             setTimeout(()=>reject('TIMEOUT speechOnGoogleHome'), 120000);
@@ -47,7 +47,7 @@ async function speechOnGoogleHome(fname, params){
                 },
                 {
                     key: 'yamabiko',
-                    command: 'echos 0.8 0.7 700.0 0.25 900.0 0.3'
+                    command: 'echos 0.8 0.7 40.0 0.25 63.0 0.3'
                 }
             ];
 
@@ -63,9 +63,9 @@ async function speechOnGoogleHome(fname, params){
                 });
             }
 
-            const fpath = vars.globalVars().httpDir + "/" + path_togo;
+            const fullPathUrl = path.posix.join(vars.globalVars().httpDir, path_togo);
 
-            if(fname) await gHome.play(fname, fpath, params).then((d)=>resolve(d)).catch((err)=>reject(err));
+            if(ghName) await gHome.play(ghName, fullPathUrl, params).then((d)=>resolve(d)).catch((err)=>reject(err));
             else resolve(params);
         }catch(err){
             reject(err);
@@ -186,7 +186,7 @@ function getCalJsonReturnToText(g, dayx) {
     return resultsText;
 }
 
-async function speechOnGoogleHomeCal(fname, params){
+async function speechOnGoogleHomeCal(ghName, params){
     let stay_loop = true;
 
     return new Promise(async (resolve, reject)=>{
@@ -200,7 +200,7 @@ async function speechOnGoogleHomeCal(fname, params){
                 params.pitch = Math.random() * 10 - 5;
 
                 console.log(params.text);
-                await speechOnGoogleHome(fname, params).then(d=>resolve(d)).catch(er=>reject(er));
+                await speechOnGoogleHome(ghName, params).then(d=>resolve(d)).catch(er=>reject(er));
             }).catch(er=>{
                 console.log(er);
                 stay_loop = true;

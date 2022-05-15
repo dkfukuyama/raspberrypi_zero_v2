@@ -12,7 +12,7 @@ async function slacksend(text) {
       channel: "#general"
     });
   }catch{
-    console.log("SLACK WEBHOOK ERROR");
+    console.log(`SLACK WEBHOOK ERROR -- ${text}`);
   }
 };
 

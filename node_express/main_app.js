@@ -150,7 +150,8 @@ page_path_set_index_ejs.pages = [
         },
         postfunc: async (req, res)=>{
             if(req.body.mode == 'playOnce'){
-                return ghome.play(req.body.gHomeName , req.body.filename, {volume : 80});
+                let filename = encodeURI(vars.globalVars().httpDir_music + "/" + req.body.filename);
+                return ghome.play(req.body.gHomeName, filename, {volume : 80});
             }
             return Promise.reject({error : `FALSE play :: ${req.body.filename}`});
         },
@@ -298,9 +299,9 @@ app.all("*.css", function (req, res) {
     });
 });
 
-app.get("*.wav", function (req, res, next){
+app.get("*.wav|*.mp3", function (req, res, next){
     const p = path.join(vars.globalVars().saveDir0, req.path);
-    res.sendFile(p, (err)=>{
+    res.sendFile(decodeURI(p), (err)=>{
         if(err){
             next(err);
         }

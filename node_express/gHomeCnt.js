@@ -3,6 +3,7 @@ const bonjour = require('bonjour')();
 const Client = require('castv2-client').Client;
 const DefaultMediaReceiver = require('castv2-client').DefaultMediaReceiver;
 const vars = require('./variables');
+const path = require('path');
 
 let gHomeAddresses = [];
 let gHomeSeekFlag_timeout = null;
@@ -128,6 +129,9 @@ function play(gHomeName, playUrl, params) {
             reject('Error: %s', err.message);
         });
     });
+}
+async function play_dir(gHomeName, dirPath, fileName, params){
+    return play(gHomeName, vars.globalVars().httpDir + "/" + fileName, param);
 }
 
 async function playAsync(gHomeName, playUrl) {
@@ -290,4 +294,5 @@ exports.stopSeekGoogleLoop = stopSeekGoogleLoop;
 exports.getGHAddrFromName = getGHAddrFromName;
 
 exports.play = play;
+exports.play_dir = play_dir;
 exports.getVolume = getVolume;

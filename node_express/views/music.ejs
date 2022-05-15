@@ -10,7 +10,7 @@
     const vs = document.getElementById('volume_slider');
 
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', '/music', false);
+    xhr.open('POST', '/music', true);
     xhr.setRequestHeader("Content-Type", "application/json");
 
     let sendData = {
@@ -21,10 +21,9 @@
       volume:vs.value
     };
 
-    //alert(JSON.stringify(sendData));
-
 	  xhr.send(JSON.stringify(sendData));
-    /* XMLデータ取得 */
+    /*
+    // XMLデータ取得 
     let data = xhr.responseText;
     let j = null;
     try {
@@ -33,6 +32,7 @@
     } catch (error) {
       alert(error);
     }
+    */
   }
 
 </script>
@@ -40,19 +40,24 @@
 
 
 <div class="row mt-5">
-  <% let g_addr = common.ghomeSpeakers %>
-  <% if(g_addr.length == 0){ %>
-      <%- '<P>ねっとわーくのなかに、ぐーぐるさんがみつかりません</p>' %>
-  <% } else g_addr.forEach((e,i)=> {%>
-  <div class="row mt-2">
-    <input type="radio" value="<%- e.speakerName %>" id="gHomeName">ぐーぐるさん(<%- e.speakerName %>)で音楽をかける</input>
-  </div>
-<% }) %>
+  <ul class="list-group list-group-horizontal">
+    <% let g_addr = common.ghomeSpeakers %>
+    <% if(g_addr.length == 0){ %>
+      <li class="list-group-item"><%= 'ねっとわーくのなかに、ぐーぐるさんがみつかりません' %></li>
+    <% } else g_addr.forEach((e,i)=> {%>
+      <li class="list-group-item">
+        <input type="radio" value="<%- e.speakerName %>" name="gHomeName" id="gHomeName">ぐーぐるさん(<%- e.speakerName %>)で音楽をかける</input>
+      </li>
+    <% }) %>
+  </ul>
+</div>
 
-<P>おとのおおきさ
-  <input id="volume_slider" type="range" name="volume" min="0" max="100" step="5" 
-      value="<%- vol %>"><div id="volume_value"><%- vol %></div>
-</P>
+
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item">おとのおおきさ</li>
+  <li class="list-group-item"><input id="volume_slider" type="range" name="volume" min="0" max="100" step="5" value="<%- vol %>"></li>
+  <li class="list-group-item"><div id="volume_value"><%- vol %></div></li>
+</ul>
 
 <div><%- JSON.stringify(query) %></div>
 <table class="table">
