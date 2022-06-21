@@ -63,7 +63,7 @@ async function speechOnGoogleHome(ghName, params){
                 });
             }
 
-            const fullPathUrl = path.posix.join(vars.globalVars().httpDir, path_togo);
+            const fullPathUrl = vars.globalVars().httpDir + "/" + path_togo;
 
             if(ghName) await gHome.play(ghName, fullPathUrl, params).then((d)=>resolve(d)).catch((err)=>reject(err));
             else resolve(params);
